@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/background_login.xml" value="0.1515" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/custom_button.xml" value="0.2225" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page2.xml" value="0.25413223140495866" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requester.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requestor.xml" value="0.10989583333333333" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_sign_up_requester.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_sign_up_requester2.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena0.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena1.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena10.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena2.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena3.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena4.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena5.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena6.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena7.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena8.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena9.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
