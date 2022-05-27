@@ -4,14 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/background_login.xml" value="0.1515" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/button.xml" value="0.124" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/custom_button.xml" value="0.2225" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.159" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/ic_launcher_background.xml" value="0.159" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/redbutton.xml" value="0.1" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page.xml" value="0.264" />
-        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page2.xml" value="0.25413223140495866" />
-        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requester.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page2.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requester.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requestor.xml" value="0.10989583333333333" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_search_donor_by_requester.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_sign_up_requester.xml" value="0.264" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_sign_up_requester2.xml" value="0.264" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_spinner_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena0.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena1.xml" value="0.25" />
@@ -24,6 +30,11 @@
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena7.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena8.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena9.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/display_item.xml" value="0.4" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/fragment_blood_bank.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/fragment_donor.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/spinner.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/spinner_item.XML" value="0.25416666666666665" />
       </map>
     </option>
   </component>

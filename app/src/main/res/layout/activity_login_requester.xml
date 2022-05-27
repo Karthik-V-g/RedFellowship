@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
+    android:background="#FB2020"
     android:orientation="vertical"
-    android:paddingBottom="16dp"
     android:paddingLeft="18dp"
-    android:paddingRight="18dp"
     android:paddingTop="16dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="16dp"
     tools:context=".LoginRequesterActivity">
-    <ScrollView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            android:layout_height="132dp"
+            app:srcCompat="@drawable/logo" />
 
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="match_parent"
-                android:layout_height="132dp"
-                app:srcCompat="@drawable/logo" />
+        <EditText
+            android:id="@+id/etLoginGmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_email_white_18dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#ffffff" />
 
-            <EditText
-                android:id="@+id/etLoginGmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:padding="8dp"
-                android:hint="Email"
-                android:textColorHint="#ffffff"
-                android:maxLines="1"
-                android:drawableLeft="@drawable/ic_email_white_18dp" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/etLoginPassword"
-                android:drawablePadding="12dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:textColorHint="#ffffff"
-                android:hint="Password"
-                android:maxLines="1"
-                android:background="@android:color/transparent"
-                android:layout_marginTop="4dp"
-                android:drawableLeft="@drawable/ic_lock_white_24dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnLogin"
-                android:background="@drawable/background_login"
-                android:text="REQUESTER LOGIN"
-                android:textAllCaps="false"
-                android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textSize="18sp"
-                android:textColor="#f16f7d"
-                android:padding="16dp"
-                android:clickable="true"/>
+        <EditText
+            android:id="@+id/etLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_lock_white_24dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textColorHint="#ffffff" />
 
-            <TextView
-                android:id="@+id/tvSignUp"
-                android:layout_width="199dp"
-                android:layout_height="40dp"
-                android:paddingTop="6dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="18dp"
-                android:layout_gravity="center_horizontal"
-                android:text="New User? Register"
-                android:textSize="22sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_login"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="REQUESTER LOGIN"
+            android:textAllCaps="false"
+            android:textColor="#f16f7d"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="219dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:text="New User? Register"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+    </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+

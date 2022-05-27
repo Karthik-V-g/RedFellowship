@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
+    android:background="#FB2020"
     android:orientation="vertical"
-    android:paddingBottom="16dp"
     android:paddingLeft="18dp"
-    android:paddingRight="18dp"
     android:paddingTop="16dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="16dp"
     tools:context=".SignUpRequesterActivity2">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,93 +45,100 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
+
             <EditText
                 android:id="@+id/etRegPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/round_phone_white_18dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:inputType="number"
-                android:padding="8dp"
                 android:hint="Phone number"
-                android:textColorHint="#ffffff"
+                android:inputType="number"
                 android:maxLines="1"
-                android:drawableLeft="@drawable/round_phone_white_18dp" />
+                android:padding="8dp"
+                android:textColorHint="#ffffff" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
+
             <EditText
                 android:id="@+id/etRegGmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/round_email_white_18dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:inputType="textEmailAddress"
-                android:padding="8dp"
                 android:hint="Gmail"
-                android:textColorHint="#ffffff"
+                android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:drawableLeft="@drawable/round_email_white_18dp" />
+                android:padding="8dp"
+                android:textColorHint="#ffffff" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
 
             <EditText
+                android:id="@+id/etRegPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/etRegPassword"
-                android:drawablePadding="12dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:textColorHint="#ffffff"
-                android:hint="Password"
-                android:maxLines="1"
-                android:background="@android:color/transparent"
                 android:layout_marginTop="4dp"
-                android:drawableLeft="@drawable/baseline_lock_white_18dp" />
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/baseline_lock_white_18dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:textColorHint="#ffffff" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f9d7db" />
+
             <Button
+                android:id="@+id/btnRegSignUp"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnRegSignUp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/background_login"
+                android:clickable="true"
+                android:padding="16dp"
                 android:text="REQUESTER SIGN UP"
                 android:textAllCaps="false"
-                android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textSize="18sp"
                 android:textColor="#f16f7d"
-                android:padding="16dp"
-                android:clickable="true"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <Button
+                android:id="@+id/btnGotoLogin"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnGotoLogin"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/background_login"
+                android:clickable="true"
+                android:padding="16dp"
                 android:text="REQUESTER LOGIN"
                 android:textAllCaps="false"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textSize="18sp"
                 android:textColor="#f16f7d"
-                android:padding="16dp"
-                android:clickable="true"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
