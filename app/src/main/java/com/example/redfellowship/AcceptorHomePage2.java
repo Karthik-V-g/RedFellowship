@@ -10,17 +10,33 @@ import android.view.View;
 import android.widget.Button;
 
 public class AcceptorHomePage2 extends AppCompatActivity {
-    private Button b;
+    private Button search,bloodbank,signout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceptor_home_page2);
         getSupportActionBar().hide();
-        b=(Button)findViewById(R.id.search);
-        b.setOnClickListener(new View.OnClickListener() {
+        search=(Button)findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AcceptorHomePage2.this,SearchDonorByRequester.class));
+            }
+        });
+
+        bloodbank=(Button)findViewById(R.id.bloodbank);
+        bloodbank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AcceptorHomePage2.this,BloodBankDetails.class));
+            }
+        });
+
+        signout=(Button)findViewById(R.id.signout);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AcceptorHomePage2.this,LoginRequesterActivity.class));
             }
         });
 

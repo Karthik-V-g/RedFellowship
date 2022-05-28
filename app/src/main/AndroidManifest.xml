@@ -11,9 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RedFellowship">
         <activity
-            android:name=".SearchDonorByRequester"
+            android:name=".BloodBankDetails2"
+            android:exported="false"
+            android:parentActivityName=".BloodBankDetails"/>
+        <activity
+            android:name=".BloodBankDetails"
             android:exported="false"
             android:parentActivityName=".AcceptorHomePage2"/>
+        <activity
+            android:name=".SearchDonorByRequester"
+            android:exported="false"
+            android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".AcceptorHomePage2"
             android:exported="false" />
