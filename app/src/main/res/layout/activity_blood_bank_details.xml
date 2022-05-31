@@ -13,24 +13,6 @@
         android:layout_height="3dp"
         android:background="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/textVi"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-
-
-        android:layout_below="@+id/view"
-        android:background="#fb2020"
-        android:importantForAutofill="no"
-        android:maxLines="1"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:text="BLOOD BANK DETAILS"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview2"
         android:layout_width="match_parent"

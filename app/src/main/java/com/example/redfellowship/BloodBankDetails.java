@@ -35,9 +35,10 @@ List<RowModel>modelList;
 
         for(int i=0;i<10;i++)
         {
-            RowModel rowModel=new RowModel("bb1","8767656765","aaa,bbb,ccc");
+            RowModel rowModel=new RowModel("Blood bank 1","8767656765","aaa,bbb,ccc");
             modelList.add(rowModel);
-                  }
+        }
+
         myAdapter=new Adapter(this,modelList);
         recyclerView.setAdapter(myAdapter);
 

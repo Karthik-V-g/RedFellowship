@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.redfellowship">
 
     <application
@@ -10,28 +11,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RedFellowship">
+
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false"
+            android:label="NOTIFICATIONS"
+            android:parentActivityName=".AcceptorHomePage2"/>
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="PROFILE"
+            android:parentActivityName=".AcceptorHomePage2"/>
         <activity
             android:name=".BloodBankDetails2"
             android:exported="false"
-            android:parentActivityName=".BloodBankDetails"/>
+            android:label="BLOOD BANK DETAILS"
+            android:parentActivityName=".BloodBankDetails" />
         <activity
             android:name=".BloodBankDetails"
             android:exported="false"
-            android:parentActivityName=".AcceptorHomePage2"/>
+            android:label="BLOOD BANK DETAILS"
+            android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".SearchDonorByRequester"
             android:exported="false"
+            android:label="SEARCH DONOR"
             android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".AcceptorHomePage2"
+            android:label="BLOOD REQUESTER HOME"
             android:exported="false" />
         <activity
             android:name=".LoginRequesterActivity"
             android:exported="false"
+            android:label="BLOOD REQUESTER"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SignUpRequesterActivity2"
             android:exported="false"
+            android:label="BLOOD REQUESTER"
             android:parentActivityName=".LoginRequesterActivity" />
         <activity
             android:name=".SplashScreen"

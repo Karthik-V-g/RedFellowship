@@ -14,11 +14,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/NameHd"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="NAME"
+            android:text="EVENT"
             android:textColor="#000000"
             android:textStyle="bold" />
 
@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="end"
             android:text="TextView"
             android:textAlignment="textEnd"
             android:textColor="#000000" />
@@ -39,7 +40,34 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/PurposeHd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PURPOSE"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Purpose6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ContactHd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,6 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="end"
             android:text="TextView"
             android:textAlignment="textEnd"
             android:textColor="#000000" />
@@ -64,11 +93,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/AddressHd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ADDRESS"
+            android:text="LOCATION"
             android:textColor="#000000"
             android:textStyle="bold" />
 
@@ -77,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="end"
             android:text="TextView"
             android:textAlignment="textEnd"
             android:textColor="#000000" />
@@ -84,56 +114,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/Call"
-            style="@style/Base.TextAppearance.AppCompat.Body1"
-            android:layout_width="74dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/redbutton"
-            android:clickable="true"
-            android:focusable="true"
-            android:text="CALL"
-            android:textAllCaps="false"
-            android:textColor="#f16f7d"
-            android:textSize="13sp"
+        <TextView
+            android:id="@+id/TimingHd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TIMING"
+            android:textColor="#000000"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/Message"
-            style="@style/Base.TextAppearance.AppCompat.Body1"
-            android:layout_width="74dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/redbutton"
-            android:clickable="true"
-            android:focusable="true"
-            android:text="MESSAGE"
-            android:textAllCaps="false"
-            android:textColor="#f16f7d"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/Location"
-            style="@style/Base.TextAppearance.AppCompat.Body1"
-            android:layout_width="74dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/redbutton"
-            android:clickable="true"
-            android:focusable="true"
-            android:text="LOCATION"
-            android:textAllCaps="false"
-            android:textColor="#f16f7d"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/Timing6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#000000" />
     </LinearLayout>
 
 </LinearLayout>

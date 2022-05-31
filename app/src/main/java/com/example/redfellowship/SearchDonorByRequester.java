@@ -2,8 +2,6 @@ package com.example.redfellowship;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.drawable.ColorDrawable;
@@ -13,22 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class SearchDonorByRequester extends AppCompatActivity  {
@@ -123,7 +108,7 @@ PagerAdapter pagerAdapter;
         /*-------------------------------------------------------------------------------------------*/
 
                   tabLayout=findViewById(R.id.tablayout);
-                  viewPager2=findViewById(R.id.viewpager2);
+                  viewPager2=findViewById(R.id.viewpager2a);
 
         FragmentManager fm=getSupportFragmentManager();
         pagerAdapter=new PagerAdapter(fm,getLifecycle());

@@ -9,6 +9,10 @@
     android:id="@+id/linearlayout"
     tools:context=".SearchDonorByRequester">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,7 +132,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager2"
+        android:id="@+id/viewpager2a"
         android:layout_width="match_parent"
         android:layout_height="442dp"
         android:layout_marginStart="5dp"
@@ -141,20 +145,21 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:background="#000000" />
+
     <Button
         android:id="@+id/btnSend"
         style="@style/Base.TextAppearance.AppCompat.Body1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/redbutton"
         android:clickable="true"
         android:focusable="true"
         android:padding="5dp"
-        android:text="SEND NOTIFICATIONS TO ALL"
+        android:text="SEND MESSAGES TO ALL"
         android:textAllCaps="false"
         android:textColor="#f16f7d"
         android:textSize="15sp"
