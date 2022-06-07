@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FB2020</color>
     <color name="my_spinner_text_color">#FFFFFF</color>
+    <color name="huawei_red">#CE0E2D</color>
 </resources>

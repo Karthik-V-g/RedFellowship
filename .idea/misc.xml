@@ -11,6 +11,7 @@
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.159" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/ic_launcher_background.xml" value="0.159" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/layout_bg.xml" value="0.159" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/layout_bg2.xml" value="0.159" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/drawable/redbutton.xml" value="0.1" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page.xml" value="0.264" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_acceptor_home_page2.xml" value="0.19088669950738915" />
@@ -19,6 +20,11 @@
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requester.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_login_requestor.xml" value="0.10989583333333333" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_notifications.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_requester_general_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_requester_status_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_search_donor_by_requester.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_sign_up_requester.xml" value="0.264" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_sign_up_requester2.xml" value="0.264" />
@@ -35,9 +41,13 @@
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena7.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena8.xml" value="0.25" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/activity_splash_screena9.xml" value="0.25" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/display_general_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/display_item.xml" value="0.4" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/display_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/fragment_blood_bank.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/fragment_donor.xml" value="0.25416666666666665" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/fragment_requester_general.xml" value="0.24010416666666667" />
+        <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/fragment_requester_status.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/row_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/spinner.xml" value="0.25416666666666665" />
         <entry key="..\:/Huawei_intern_assignments/ANDROID/RedFellowship/app/src/main/res/layout/spinner_item.XML" value="0.25416666666666665" />
