@@ -98,7 +98,6 @@
                 android:drawableLeft="@drawable/baseline_lock_white_18dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:inputType="textPassword"
                 android:maxLines="1"
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"

@@ -134,6 +134,8 @@ public class MainActivity2 extends AppCompatActivity {
         Log.i(TAG, "email:" + authAccount.getEmail());
         Log.i(TAG, "openid:" + authAccount.getOpenId());
         Log.i(TAG, "unionid:" + authAccount.getUnionId());
+       // startActivity(new Intent(MainActivity2.this,AcceptorHomePage2.class));
+        Toast.makeText(this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
         showLog("display name:" + authAccount.getDisplayName() + "photo uri string:" + authAccount.getAvatarUriString() +
                 "email:" + authAccount.getEmail() + "openid:" + authAccount.getOpenId() + "unionid:" + authAccount.getUnionId());
         // TODO 获取用户信息后业务逻辑
@@ -153,8 +155,8 @@ public class MainActivity2 extends AppCompatActivity {
                 // The login is successful, and the login account information object authAccount is obtained
                 AuthAccount authAccount = authAccountTask.getResult();
                 dealWithResultOfSignIn(authAccount);
-                startActivity(new Intent(MainActivity2.this,AcceptorHomePage2.class));
-                Toast.makeText(this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
+                //startActivity(new Intent(MainActivity2.this,AcceptorHomePage2.class));
+               // Toast.makeText(this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
                 Log.i(TAG, "onActivitResult of sigInInIntent, request code: " + REQUEST_CODE_SIGN_IN);
             } else {
                 // 登录失败，status code标识了失败的原因，请参考API中的错误码参考了解详细错误原因
@@ -176,6 +178,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Log.i(TAG, "signOut Success");
+                Toast.makeText(MainActivity2.this, "Signout Succesfull ", Toast.LENGTH_SHORT).show();
                 showLog("signOut Success");
             }
         }).addOnFailureListener(new OnFailureListener() {
