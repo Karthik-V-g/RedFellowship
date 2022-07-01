@@ -2,21 +2,21 @@
 
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:layout_weight="0"
-android:background="#FB2020"
-android:fillViewport="true"
-android:orientation="vertical"
-android:paddingLeft="18dp"
-android:paddingTop="16dp"
-android:paddingRight="18dp"
-android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0"
+    android:background="#FB2020"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingTop="16dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="16dp"
 
-tools:context=".SignUpRequesterActivity2">
+    tools:context=".SignUpRequesterActivity2">
 
 
     <LinearLayout
@@ -24,16 +24,44 @@ tools:context=".SignUpRequesterActivity2">
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="start|top"
+
+
+            android:inputType="textMultiLine"
+
+            android:text="Please complete your profile before entering into the home page it is mandatory.You cannot change your email, password and name as you were logged in using huawei account. Hence please change it in huawei website."
+            android:textColor="#090909"
+            android:textIsSelectable="true"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#f9d7db" />
+
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="164dp"
+            android:layout_height="123dp"
             app:srcCompat="@drawable/ic_baseline_person_pin_24" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#f9d7db" />
+
 
         <EditText
             android:id="@+id/etUpdName"
@@ -43,11 +71,40 @@ tools:context=".SignUpRequesterActivity2">
             android:drawableLeft="@drawable/round_account_circle_white_18dp"
             android:drawablePadding="12dp"
             android:ems="10"
+            android:focusable="false"
+
             android:hint="Name"
-            android:inputType="textEmailAddress"
+            android:inputType="none"
             android:maxLines="1"
             android:padding="8dp"
-            android:textColorHint="#ffffff" />
+            android:textColor="#FF64FFD2"
+            android:textColorHint="#ffffff"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/etUpdGmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/round_email_white_18dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Gmail"
+            android:inputType="none"
+
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="#64FFD2"
+            android:textColorHint="#ffffff"
+            android:textIsSelectable="true" />
 
         <View
             android:layout_width="match_parent"
@@ -74,43 +131,6 @@ tools:context=".SignUpRequesterActivity2">
             android:layout_height="1dp"
             android:background="#f9d7db" />
 
-        <EditText
-            android:id="@+id/etUpdGmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/round_email_white_18dp"
-            android:drawablePadding="12dp"
-            android:ems="10"
-            android:hint="Gmail"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:textColorHint="#ffffff" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#f9d7db" />
-
-        <EditText
-            android:id="@+id/etUpdPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/baseline_lock_white_18dp"
-            android:drawablePadding="12dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="8dp"
-            android:textColorHint="#ffffff" />
 
         <View
             android:layout_width="match_parent"
@@ -350,7 +370,22 @@ tools:context=".SignUpRequesterActivity2">
             android:background="@drawable/background_login"
             android:clickable="true"
             android:padding="16dp"
-            android:text="UPDATE"
+            android:text="UPDATE ACCOUNT"
+            android:textAllCaps="false"
+            android:textColor="#f16f7d"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSignOut"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_login"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="SIGN OUT"
             android:textAllCaps="false"
             android:textColor="#f16f7d"
             android:textSize="18sp"

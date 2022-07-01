@@ -11,21 +11,27 @@ public class PagerAdapter2 extends FragmentStateAdapter {
     public PagerAdapter2(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle){
         super(fragmentManager, lifecycle);
     }
-
+Boolean status=true;
     @NonNull
     @Override
     public Fragment createFragment(int position) {
+
+
+
         switch(position){
             case 1:
+                return new RequesterStatusFragment();
+            case 2:
                 return new RequesterGeneralFragment();
             default:
-                return new RequesterStatusFragment();
+                if(status){return new DonorStatusFragment();}
+                else {return new BlankDonorStatusFragment();}
         }
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }
 

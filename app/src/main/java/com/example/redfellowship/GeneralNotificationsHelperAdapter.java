@@ -57,9 +57,9 @@ public class GeneralNotificationsHelperAdapter extends RecyclerView.Adapter {
         TextView tv1,tv2,tv3,tv4,tv5;
         public ViewHolderClass(@NonNull View itemView) {
             super(itemView);
-            tv1=(TextView)itemView.findViewById(R.id.Name6);
-            tv2=(TextView)itemView.findViewById(R.id.Contact6);
-            tv3=(TextView)itemView.findViewById(R.id.Address6);
+            tv1=(TextView)itemView.findViewById(R.id.tv1);
+            tv2=(TextView)itemView.findViewById(R.id.tv3);
+            tv3=(TextView)itemView.findViewById(R.id.tv5);
             tv4=(TextView)itemView.findViewById(R.id.Timing6);
             tv5=(TextView)itemView.findViewById(R.id.Purpose6);
         }

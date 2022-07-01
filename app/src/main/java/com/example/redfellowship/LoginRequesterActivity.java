@@ -85,10 +85,17 @@ public class LoginRequesterActivity extends AppCompatActivity {
 
                 // showLog("silent sign in success");
                 dealWithResultOfSignIn(authAccount);
-                startActivity(new Intent(LoginRequesterActivity.this,AcceptorHomePage2.class));
+                startActivity(new Intent(LoginRequesterActivity.this,HuaweiLoginProfileDetails.class));
                 Toast.makeText(LoginRequesterActivity.this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
                 Toast.makeText(LoginRequesterActivity.this, "Hello "+authAccount.getEmail(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(LoginRequesterActivity.this, "Hello "+authAccount.getGivenName(), Toast.LENGTH_SHORT).show();
+                final String email=authAccount.getEmail().toString();
+                final String name=authAccount.getGivenName().toString();
+
+                Intent i=new Intent(LoginRequesterActivity.this,HuaweiLoginProfileDetails.class);
+                i.putExtra("temail",email);
+                i.putExtra("tname",name);
+                startActivity(i);
             }
         });
         task.addOnFailureListener(new OnFailureListener() {
@@ -132,7 +139,7 @@ public class LoginRequesterActivity extends AppCompatActivity {
 
                 AuthAccount authAccount = authAccountTask.getResult();
                 dealWithResultOfSignIn(authAccount);
-                startActivity(new Intent(LoginRequesterActivity.this,AcceptorHomePage2.class));
+                startActivity(new Intent(LoginRequesterActivity.this,HuaweiLoginProfileDetails.class));
                 Toast.makeText(LoginRequesterActivity.this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
 
                 //Log.i(TAG, "onActivitResult of sigInInIntent, request code: " + REQUEST_CODE_SIGN_IN);
