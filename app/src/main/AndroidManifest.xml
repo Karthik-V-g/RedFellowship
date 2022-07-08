@@ -22,9 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RedFellowship">
         <activity
-            android:name=".HuaweiLoginProfileDetails"
-            android:label="PROFILE UPDATE"
+            android:name=".MainActivity4"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
+        <activity
+            android:name=".HuaweiLoginProfileDetails"
+            android:exported="false"
+            android:label="PROFILE UPDATE" />
         <activity
             android:name=".LoginMainActivity3"
             android:exported="false" />

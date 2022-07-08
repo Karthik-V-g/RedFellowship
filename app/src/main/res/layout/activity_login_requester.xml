@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FB2020"
+    android:background="#DF2B2B"
     android:orientation="vertical"
     android:paddingLeft="18dp"
     android:paddingTop="16dp"
@@ -24,6 +24,21 @@
             android:layout_width="match_parent"
             android:layout_height="132dp"
             app:srcCompat="@drawable/logo" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="label">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <View
@@ -131,6 +146,6 @@
 
 
     </LinearLayout>
-    </ScrollView>
+</ScrollView>
 
 
