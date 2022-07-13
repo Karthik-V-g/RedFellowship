@@ -61,12 +61,12 @@
         <activity
             android:name=".SearchDonorByRequester"
             android:exported="false"
-            android:label="SEARCH DONOR"
+            android:label="Search Donor"
             android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".AcceptorHomePage2"
             android:exported="false"
-            android:label="HOME PAGE" />
+            />
         <activity
             android:name=".LoginRequesterActivity"
             android:exported="false"
@@ -93,6 +93,9 @@
         <meta-data
             android:name="com.huawei.hms.client.channel.androidMarket"
             android:value="false" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

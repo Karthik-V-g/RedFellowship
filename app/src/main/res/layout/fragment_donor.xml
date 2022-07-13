@@ -4,8 +4,26 @@
     android:id="@+id/linearlayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e1e1e1"
     android:orientation="vertical"
     tools:context=".DonorFragment">
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/sendmsgtoall"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="50dp"
+     android:layout_marginTop="15dp"
+     android:layout_marginEnd="50dp"
+     android:layout_marginBottom="5dp"
+     android:background="@drawable/send_request_button"
+     android:drawableLeft="@drawable/ic_baseline_send_24"
+     android:padding="10dp"
+     android:shadowColor="#CC4242"
+     android:text="Send Requests to all Donors"
+     android:textColor="#FFFFFF"
+     android:textSize="15sp"
+     tools:ignore="MissingClass" />
 
  <androidx.recyclerview.widget.RecyclerView
      android:id="@+id/recyclerview"

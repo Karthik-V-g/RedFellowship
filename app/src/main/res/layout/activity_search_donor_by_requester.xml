@@ -2,106 +2,190 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FB2020"
+    android:background="#e1e1e1"
     android:orientation="vertical"
-    android:id="@+id/linearlayout"
     tools:context=".SearchDonorByRequester">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="#000000" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/layout_blank_roundedcorner"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="5dp">
 
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search by District"
+            android:textColor="#000000"
+            android:textStyle="italic" />
 
         <LinearLayout
-            android:layout_width="267dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
             android:gravity="start"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000" />
 
-            <Spinner
-                android:id="@+id/btngetBloodGroup"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:entries="@array/Blood_Group"
-                android:minHeight="48dp"
-                tools:ignore="DuplicateSpeakableTextCheck"></Spinner>
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Blood Group"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:hintTextColor="#000000">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000" />
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <Spinner
-                android:id="@+id/btngetDistrict"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/District"
-                android:minHeight="48dp"
-                tools:ignore="DuplicateSpeakableTextCheck"></Spinner>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000" />
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="District"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:hintTextColor="#000000">
 
-            <Spinner
-                android:id="@+id/btngetDistance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/Distance"
-                android:minHeight="48dp"
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                tools:ignore="DuplicateSpeakableTextCheck"></Spinner>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000" />
+            <ImageView
+                android:id="@+id/imgsearch1"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="false"
+                android:layout_margin="1dp"
+                app:srcCompat="@drawable/search_blue"
+                tools:ignore="MissingClass" />
 
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnLogin"
-            style="@style/Base.TextAppearance.AppCompat.Body1"
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/redbutton"
-            android:clickable="true"
-            android:focusable="true"
-            android:text="SEARCH"
-            android:textAllCaps="false"
-            android:textColor="#f16f7d"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:layout_marginTop="3dp"
+            android:text="Search by Distance"
+            android:textColor="#000000"
+            android:textStyle="italic" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:background="#000000" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Blood Group"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:hintTextColor="#000000">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:hint="Distance"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="#000000"
+                app:endIconTint="#000000"
+                app:hintTextColor="#000000">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imgsearch2"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="false"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/search_blue"
+                tools:ignore="MissingClass" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
@@ -110,17 +194,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:background="#fb2020"
+        android:background="@color/red"
         android:elevation="5dp"
-        app:tabIndicatorColor="#ffffff"
 
+        app:tabIndicatorColor="#ffffff"
         app:tabSelectedTextColor="#ffffff"
         app:tabTextColor="#99ece5dd">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="DONOR" />
 
         <com.google.android.material.tabs.TabItem
@@ -128,42 +211,21 @@
             android:layout_height="wrap_content"
             android:text="BLOOD BANK" />
 
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAP" />
+
         />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager2a"
         android:layout_width="match_parent"
-        android:layout_height="442dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:background="#FFFFFF" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="#000000" />
-
-    <Button
-        android:id="@+id/btnSend"
-        style="@style/Base.TextAppearance.AppCompat.Body1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/redbutton"
-        android:clickable="true"
-        android:focusable="true"
-        android:padding="5dp"
-        android:text="SEND MESSAGES TO ALL"
-        android:textAllCaps="false"
-        android:textColor="#f16f7d"
-        android:textSize="15sp"
-        android:textStyle="bold" />
 
 
 </LinearLayout>

@@ -21,7 +21,7 @@
 
 
     <ImageView
-        android:id="@+id/HuaweiIdAuthButton1"
+        android:id="@+id/HuaweiIdAuthButton11"
         android:layout_width="199dp"
         android:layout_height="163dp"
         android:layout_gravity="center_horizontal"

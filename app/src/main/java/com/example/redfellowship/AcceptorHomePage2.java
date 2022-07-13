@@ -1,17 +1,23 @@
 package com.example.redfellowship;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
 import com.huawei.hmf.tasks.Task;
@@ -25,7 +31,7 @@ import com.huawei.hms.support.account.service.AccountAuthService;
 import java.util.Objects;
 
 public class AcceptorHomePage2 extends AppCompatActivity {
-    private Button search,bloodbank,signout,profile,notificatons,cancelauthorization;
+    private CardView search,bloodbank,signout,profile,notificatons,cancelauthorization;
 
 
     private AccountAuthService mAuthService;
@@ -74,9 +80,17 @@ public class AcceptorHomePage2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceptor_home_page2);
-
+        getSupportActionBar().setElevation(0);
         Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.red)));
-        search=(Button)findViewById(R.id.search);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.red));
+        }
+
+        search=findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +98,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-        bloodbank=(Button)findViewById(R.id.bloodbank);
+        bloodbank=findViewById(R.id.bloodbank);
         bloodbank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +106,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-        profile=(Button)findViewById(R.id.profile);
+        profile=findViewById(R.id.profile);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +114,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-       notificatons=(Button)findViewById(R.id.notifications);
+       notificatons=findViewById(R.id.notifications);
         notificatons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +122,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-        signout=(Button)findViewById(R.id.HuaweiIdSignOutButton1);
+        signout=findViewById(R.id.HuaweiIdSignOutButton1);
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +130,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-        cancelauthorization=(Button)findViewById(R.id.HuaweiIdCancelAuthButton1);
+        cancelauthorization=findViewById(R.id.HuaweiIdCancelAuthButton1);
         cancelauthorization.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,6 +138,39 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_favorite:
+                // User chose the "Favorite" action, mark the current item
+                // as a favorite...
+                MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(AcceptorHomePage2.this);
+                builder.setTitle("Why should you donate blood?");
+                builder.setMessage(R.string.des);
+                builder.setBackground(getResources().getDrawable(R.drawable.layout_design,null));
+                builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.show();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
     private void signOut() {

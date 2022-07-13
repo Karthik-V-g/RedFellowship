@@ -8,7 +8,7 @@ public class Data {
        "9876765678","8767876765","9876567656"
     };
     public static String[] Address=new String[]{
-            "xxx,yyy,zzz","aaa,bbb,ccc","ase,juy,kij"
+            "AHE Street,XYZ Road, Erode","123-Vision Street, Chennai","Globe Garden, KK Road, Coimbatore"
     };
 
     public static String[] names1=new String[]{
@@ -18,6 +18,6 @@ public class Data {
             "9876765678","8767876765","9876567656"
     };
     public static String[] Address1=new String[]{
-            "xxx,yyy,zzz","aaa,bbb,ccc","ase,juy,kij"
+            "AHE Street,XYZ Road, Erode","123-Vision Street, Chennai","Globe Garden, KK ROad, Coimbatore"
     };
 }

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">RedFellowship</string>
-    <string name="des">Blood donation is a community responsibility. While you are reading this, a local patient needs blood.\n\n1. Blood is needed every two seconds.\n2. About one in seven people entering a hospital needs blood.\n3. Blood is always needed for treatment of accident victims, cancer patients, hemophiliacs and surgery patients.\n4. Blood cannot be manufactured.\n5. Only 37 percent of our country s population is eligible to give blood, and less than 10 percent of those who can donate actually do donate annually.\n6. What if everyone eligible to donate became complacent and decided they did not need to donate because someone else would?\n7. What if there was not enough donated blood available when you, a loved one - anyone - needed it?\n8. Our blood supply comes from caring donors like you.\n9. It takes about one hour of your time. When you give blood, it gives someone another smile, another hug, another chance.\n10.It is the gift of life.</string>
+    <string name="des">Blood donation is a community responsibility. While you are reading this, a local patient needs blood.\n\n1. Blood is needed every two seconds.\n2. About one in seven people entering a hospital needs blood.\n3. Blood is always needed for treatment of accident victims, cancer patients, hemophiliacs and surgery patients.\n4. Blood cannot be manufactured.\n5. Only 37 percent of our country s population is eligible to give blood, and less than 10 percent of those who can donate actually do donate annually.\n6. What if everyone eligible to donate became complacent and decided they did not need to donate because someone else would?\n7. What if there was not enough donated blood available when you, a loved one - anyone - needed it?\n8. Our blood supply comes from caring donors like you.\n9. It takes about one hour of your time. When you give blood, it gives someone another smile, another hug, another chance.\n10.It is the gift of life.\n\n<b>Be a Hero. Give Blood.</b></string>
     <string name="home">\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0HOME</string>
     <string name="homeimg">image</string>
     <string name="notifications">NOTIFICATIONS</string>
@@ -17,7 +17,6 @@
 
 
     <string-array name="Blood_Group">
-        <item>Blood Type</item>
         <item>A+</item>
         <item>A-</item>
         <item>B+</item>
@@ -29,7 +28,6 @@
     </string-array>
 
     <string-array name="District">
-        <item>District</item>
         <item>Ariyalur</item>
         <item>Chennai</item>
         <item>Coimbatore</item>
@@ -72,7 +70,6 @@
 
     </string-array>
     <string-array name="Distance">
-        <item>Distance</item>
         <item>5Km</item>
         <item>10Km</item>
         <item>15Km</item>

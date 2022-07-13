@@ -34,7 +34,7 @@ public class HelperAdapter2 extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ViewHolderClass viewHolderClass=(ViewHolderClass) holder;
         viewHolderClass.tv1.setText(Data.names1[position]);
-        viewHolderClass.tv2.setText(Data.Contact1[position]);
+        //viewHolderClass.tv2.setText(Data.Contact1[position]);
         viewHolderClass.tv3.setText(Data.Address1[position]);
         viewHolderClass.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,9 +52,9 @@ public class HelperAdapter2 extends RecyclerView.Adapter {
         TextView tv1,tv2,tv3;
         public ViewHolderClass(@NonNull View itemView) {
             super(itemView);
-            tv1=(TextView)itemView.findViewById(R.id.tv1);
-            tv2=(TextView)itemView.findViewById(R.id.tv3);
-            tv3=(TextView)itemView.findViewById(R.id.tv5);
+            tv1=(TextView)itemView.findViewById(R.id.et_name);
+          //  tv2=(TextView)itemView.findViewById(R.id.tv3);
+            tv3=(TextView)itemView.findViewById(R.id.et_address);
         }
     }
 }

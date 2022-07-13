@@ -6,11 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
@@ -38,7 +36,7 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main3);
-        img = findViewById(R.id.HuaweiIdAuthButton1);
+        img = findViewById(R.id.HuaweiIdAuthButton11);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
