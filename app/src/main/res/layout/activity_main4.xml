@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ef5350">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/curvebg"
@@ -26,16 +26,14 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:drawableLeftCompat="@drawable/ic_baseline_home_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="195dp" />
+            android:orientation="vertical">
+
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/search"
@@ -75,41 +73,6 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/notifications"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/search"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="@+id/search">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/notifications"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/ic_baseline_notifications_active_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Notifications"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:id="@+id/bloodbank"
             android:layout_width="175dp"
             android:layout_height="150dp"
@@ -141,6 +104,79 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/HuaweiIdSignOutButton1"
+            android:layout_width="175dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="25dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bloodbank"
+            app:layout_constraintStart_toStartOf="@+id/bloodbank"
+            app:layout_constraintTop_toBottomOf="@+id/bloodbank">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:srcCompat="@drawable/logout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Out"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notifications"
+            android:layout_width="175dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/search">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:srcCompat="@drawable/ic_baseline_notifications_active_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/profile"
@@ -177,40 +213,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/HuaweiIdSignOutButton1"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="25dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/bloodbank"
-            app:layout_constraintStart_toStartOf="@+id/bloodbank"
-            app:layout_constraintTop_toBottomOf="@+id/bloodbank">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/logout" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign Out"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/HuaweiIdCancelAuthButton1"
@@ -248,5 +250,5 @@
 
         </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.>
 </ScrollView>

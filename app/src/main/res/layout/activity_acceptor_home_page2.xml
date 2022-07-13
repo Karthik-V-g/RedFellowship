@@ -6,246 +6,267 @@
     android:layout_height="match_parent"
     android:background="#ef5350">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/curvebg"
-        tools:context=".MainActivity4">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawablePadding="5dp"
+                android:text="HOME"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_baseline_home_24" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:drawablePadding="5dp"
-            android:gravity="center_vertical"
-            android:text="HOME"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:drawableLeftCompat="@drawable/ic_baseline_home_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="195dp" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/search"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="45dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.65"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            android:background="@drawable/curvebg"
+            android:orientation="horizontal"
+            tools:context=".MainActivity4">
 
             <LinearLayout
-                android:id="@+id/home"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:background="#FFFFFF"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/ic_baseline_person_search_24" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Search Donor"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/search"
+                    android:layout_width="154dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/home"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/ic_baseline_person_search_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Search Donor"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bloodbank"
+                    android:layout_width="154dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/bbank" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Blood Bank"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HuaweiIdSignOutButton1"
+                    android:layout_width="154dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/logout" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sign Out"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/notifications"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/search"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="@+id/search">
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/ic_baseline_notifications_active_24" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Notifications"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notifications"
+                    android:layout_width="154dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="25dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/bloodbank"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/search"
-            app:layout_constraintStart_toStartOf="@+id/search"
-            app:layout_constraintTop_toBottomOf="@+id/search">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/ic_baseline_notifications_active_24" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notifications"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/bbank" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Blood Bank"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile"
+                    android:layout_width="154dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profile"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/bloodbank"
-            app:layout_constraintEnd_toEndOf="@+id/notifications"
-            app:layout_constraintStart_toStartOf="@+id/notifications"
-            app:layout_constraintTop_toTopOf="@+id/bloodbank"
-            app:layout_constraintVertical_bias="0.0">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/profile_update" />
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/profile_update" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profile Update"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Profile Update"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
+                    </LinearLayout>
 
-            </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/HuaweiIdSignOutButton1"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="25dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/bloodbank"
-            app:layout_constraintStart_toStartOf="@+id/bloodbank"
-            app:layout_constraintTop_toBottomOf="@+id/bloodbank">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HuaweiIdCancelAuthButton1"
+                    android:layout_width="154dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="20dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/logout" />
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/cancelauth" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign Out"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cancel_authorization"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/HuaweiIdCancelAuthButton1"
-            android:layout_width="175dp"
-            android:layout_height="150dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/HuaweiIdSignOutButton1"
-            app:layout_constraintEnd_toEndOf="@+id/profile"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/profile"
-            app:layout_constraintTop_toTopOf="@+id/HuaweiIdSignOutButton1">
+                </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:srcCompat="@drawable/cancelauth" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancel_authorization"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </ScrollView>

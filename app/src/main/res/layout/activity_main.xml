@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#ffffff"
     android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".LoginRequesterActivity">
@@ -43,7 +43,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/food_back"
+            android:background="#ef5350"
             android:orientation="horizontal">
 
             <ImageView
@@ -61,9 +61,10 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="sans-serif"
+                android:shadowColor="#000000"
                 android:text="BLOOD REQUESTER/DONOR"
-                android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -84,7 +85,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/food_back"
+            android:background="#ef5350"
             android:orientation="horizontal">
 
             <ImageView
@@ -102,9 +103,10 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="sans-serif"
+                android:shadowColor="#000000"
                 android:text="BLOOD BANK"
-                android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

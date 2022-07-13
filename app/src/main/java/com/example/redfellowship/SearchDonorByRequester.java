@@ -5,16 +5,20 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -50,45 +54,19 @@ ImageView search1,search2;
 
         /*-------------------------------------------------------------------------------------------*/
 
-
+        FragmentManager fm=getSupportFragmentManager();
 
         search1=findViewById(R.id.imgsearch1);
         search2=findViewById(R.id.imgsearch2);
+        tabLayout=findViewById(R.id.tablayout);
+        viewPager2=findViewById(R.id.viewpager2a);
 
         search1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                tabLayout=findViewById(R.id.tablayout);
-                viewPager2=findViewById(R.id.viewpager2a);
-
-                FragmentManager fm=getSupportFragmentManager();
                 pagerAdapter=new PagerAdapter(fm,getLifecycle(),1);
                 viewPager2.setAdapter(pagerAdapter);
-                tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                    @Override
-                    public void onTabSelected(TabLayout.Tab tab) {
-                        viewPager2.setCurrentItem(tab.getPosition());
-                    }
-
-                    @Override
-                    public void onTabUnselected(TabLayout.Tab tab) {
-
-                    }
-
-                    @Override
-                    public void onTabReselected(TabLayout.Tab tab) {
-
-                    }
-                });
-
-                viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-                    @Override
-                    public void onPageSelected(int position) {
-                        super.onPageSelected(position);
-                        tabLayout.selectTab(tabLayout.getTabAt(position));
-                    }
-                });
 
                 Toast.makeText(SearchDonorByRequester.this, "search1", Toast.LENGTH_SHORT).show();
 
@@ -98,36 +76,9 @@ ImageView search1,search2;
             @Override
             public void onClick(View v) {
 
-                tabLayout=findViewById(R.id.tablayout);
-                viewPager2=findViewById(R.id.viewpager2a);
-
-                FragmentManager fm=getSupportFragmentManager();
                 pagerAdapter=new PagerAdapter(fm,getLifecycle(),2);
                 viewPager2.setAdapter(pagerAdapter);
-                tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                    @Override
-                    public void onTabSelected(TabLayout.Tab tab) {
-                        viewPager2.setCurrentItem(tab.getPosition());
-                    }
 
-                    @Override
-                    public void onTabUnselected(TabLayout.Tab tab) {
-
-                    }
-
-                    @Override
-                    public void onTabReselected(TabLayout.Tab tab) {
-
-                    }
-                });
-
-                viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-                    @Override
-                    public void onPageSelected(int position) {
-                        super.onPageSelected(position);
-                        tabLayout.selectTab(tabLayout.getTabAt(position));
-                    }
-                });
 
                 Toast.makeText(SearchDonorByRequester.this, "search2", Toast.LENGTH_SHORT).show();
             }
@@ -193,11 +144,10 @@ ImageView search1,search2;
 
 
         /*-------------------------------------------------------------------------------------------*/
-        tabLayout=findViewById(R.id.tablayout);
-        viewPager2=findViewById(R.id.viewpager2a);
 
-        FragmentManager fm=getSupportFragmentManager();
-        pagerAdapter=new PagerAdapter(fm,getLifecycle(),3);
+
+
+        pagerAdapter= new PagerAdapter(fm,getLifecycle(),3);
         viewPager2.setAdapter(pagerAdapter);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -231,6 +181,11 @@ ImageView search1,search2;
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.viewpager2,donorFragment);
         fragmentTransaction.commit();*/
+
+
+
+
+
 
 
 
