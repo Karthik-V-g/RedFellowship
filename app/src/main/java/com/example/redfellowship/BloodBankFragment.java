@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class BloodBankFragment extends Fragment {
     RecyclerView recyclerView;
-    ArrayList name,contact,address;
+    ArrayList name,bloodtype,address,bloodunits;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,14 +22,16 @@ public class BloodBankFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_blood_bank, container, false);
         recyclerView=view.findViewById(R.id.recyclerview);
         name=new ArrayList();
-        contact=new ArrayList();
+        bloodtype=new ArrayList();
         address=new ArrayList();
+        bloodunits=new ArrayList();
         for (int i=0;i<Data.names1.length;i++){
             name.add(Data.names1);
-            contact.add(Data.Contact1);
+            bloodtype.add(Data.BloodTypeBB);
             address.add(Data.Address1);
+            bloodunits.add(Data.BloodUnits);
         }
-        HelperAdapter2 helperAdapter=new HelperAdapter2(getContext(),name,contact,address);
+        HelperAdapter2 helperAdapter=new HelperAdapter2(getContext(),name,bloodtype,bloodunits,address);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(helperAdapter);

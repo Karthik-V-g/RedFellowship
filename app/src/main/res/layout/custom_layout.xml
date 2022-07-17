@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/layout_blank_roundedcorner"
     android:orientation="vertical"
     android:padding="15dp">
@@ -37,6 +38,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutBloodg1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="#FFFFFF"
@@ -46,21 +48,20 @@
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeColor="@color/black"
-        app:endIconMode="clear_text"
         app:endIconTint="#000000"
         app:hintTextColor="#000000"
         app:startIconDrawable="@drawable/ic_baseline_bloodtype_24"
-        app:startIconTint="#000000">
+        app:startIconTint="#000000"
+        tools:ignore="MissingConstraints">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/etUpdBloodg"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF"
             android:hint="Blood Group"
-            android:inputType="text" />
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutUnit1"
@@ -90,8 +91,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutDOB"
-
+        android:id="@+id/layoutDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="#FFFFFF"
@@ -109,19 +109,17 @@
         app:startIconTint="#000000">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etUpdDOB"
+            android:id="@+id/etUpdDate"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
-            android:hint="Date and Time (dd/mm/yyyy HH:MM:SS)"
+            android:hint="Blood required within"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutPhone"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="#FFFFFF"
@@ -150,7 +148,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutAddress"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="#FFFFFF"
@@ -176,11 +173,28 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/grey_roundedcornerborder"
+        android:backgroundTint="@color/light_blue"
+        android:drawableLeft="@drawable/ic_location_black"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/black"
+        android:padding="10dp"
+        android:text="Enable live location"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
@@ -204,6 +218,7 @@
             android:text="Send"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
+
 
     </LinearLayout>
 

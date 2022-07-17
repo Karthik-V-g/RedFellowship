@@ -15,11 +15,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+
+        android:icon="@drawable/logo4"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo4"
         android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
         android:theme="@style/Theme.RedFellowship">
         <activity
             android:name=".MainActivity4"
@@ -28,7 +31,7 @@
         <activity
             android:name=".HuaweiLoginProfileDetails"
             android:exported="false"
-            android:label="PROFILE UPDATE" />
+             />
         <activity
             android:name=".LoginMainActivity3"
             android:exported="false" />
@@ -41,22 +44,22 @@
         <activity
             android:name=".NotificationsActivity"
             android:exported="false"
-            android:label="NOTIFICATIONS"
+            android:label="Notifications"
             android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false"
-            android:label="PROFILE"
+            android:label="Profile"
             android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".BloodBankDetails2"
             android:exported="false"
-            android:label="BLOOD BANK DETAILS"
+            android:label="Blood Bank"
             android:parentActivityName=".BloodBankDetails" />
         <activity
             android:name=".BloodBankDetails"
             android:exported="false"
-            android:label="BLOOD BANK DETAILS"
+            android:label="Blood Banks"
             android:parentActivityName=".AcceptorHomePage2" />
         <activity
             android:name=".SearchDonorByRequester"
@@ -75,7 +78,7 @@
         <activity
             android:name=".SignUpRequesterActivity2"
             android:exported="false"
-            android:label="REGISTER PAGE"
+            android:label="Register"
             android:parentActivityName=".LoginRequesterActivity" />
         <activity
             android:name=".SplashScreen"

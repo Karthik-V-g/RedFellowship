@@ -14,12 +14,12 @@ import java.util.ArrayList;
 public class HelperAdapter extends RecyclerView.Adapter {
     Context context;
     ArrayList arrayListname;
-    ArrayList arrayListcontact;
+    ArrayList arrayListbloodtype;
     ArrayList arrayListaddress;
-    public HelperAdapter(Context context,ArrayList arrayListname,ArrayList arrayListcontact,ArrayList arrayListaddress){
+    public HelperAdapter(Context context,ArrayList arrayListname,ArrayList arrayListbloodtype,ArrayList arrayListaddress){
         this.context=context;
         this.arrayListname=arrayListname;
-        this.arrayListcontact=arrayListcontact;
+        this.arrayListbloodtype=arrayListbloodtype;
         this.arrayListaddress=arrayListaddress;
     }
     @NonNull
@@ -34,7 +34,7 @@ public class HelperAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
             ViewHolderClass viewHolderClass=(ViewHolderClass) holder;
             viewHolderClass.tv1.setText(Data.names[position]);
-           // viewHolderClass.tv2.setText(Data.Contact[position]);
+            viewHolderClass.tv2.setText(Data.BloodType[position]);
             viewHolderClass.tv3.setText(Data.Address[position]);
             viewHolderClass.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -53,7 +53,7 @@ public class HelperAdapter extends RecyclerView.Adapter {
         public ViewHolderClass(@NonNull View itemView) {
             super(itemView);
             tv1=(TextView)itemView.findViewById(R.id.et_name);
-           // tv2=(TextView)itemView.findViewById(R.id.tv3);
+            tv2=(TextView)itemView.findViewById(R.id.et_blood_typebb);
             tv3=(TextView)itemView.findViewById(R.id.et_address);
         }
     }

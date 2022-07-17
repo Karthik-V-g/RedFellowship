@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".DonorStatusFragment">
-
-
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerview"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e1e1e1"
+    tools:context=".DonorStatusFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:fontFamily="@font/pacifico"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="Your single drop, can save a life !"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
 </LinearLayout>
 
 

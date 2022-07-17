@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
-    android:background="@drawable/layout_bg"
+    android:background="@drawable/layout_blank_roundedcorner"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -14,48 +15,32 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/NameHd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="EVENT"
-            android:textColor="#000000"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:layout_weight="20"
+            android:padding="7dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/red_roundedcornerborder"
             android:text="TextView"
-            android:textAlignment="textEnd"
-            android:textColor="#000000" />
+            android:textStyle="bold"
+            android:textColor="@color/red_dark_variant" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:padding="3dp"
         android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/PurposeHd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PURPOSE"
-            android:textColor="#000000"
-            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Purpose6"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:padding="3dp"
             android:text="TextView"
-            android:textAlignment="textEnd"
+            android:layout_gravity="center_vertical|end"
             android:textColor="#000000" />
     </LinearLayout>
 
@@ -64,25 +49,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:padding="3dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/ContactHd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/event_contact_icon"
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="CONTACT"
-            android:textColor="#000000"
-            android:textStyle="bold" />
+            app:srcCompat="@drawable/phone_blue" />
+
 
         <TextView
             android:id="@+id/tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:layout_weight="20"
             android:text="TextView"
-            android:textAlignment="textEnd"
+            android:padding="3dp"
             android:textColor="#000000" />
     </LinearLayout>
 
@@ -90,25 +74,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:padding="3dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/AddressHd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/event_location_icon"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="LOCATION"
-            android:textColor="#000000"
-            android:textStyle="bold" />
+            app:srcCompat="@drawable/map" />
+
 
         <TextView
             android:id="@+id/tv5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:layout_weight="20"
+            android:padding="3dp"
             android:text="TextView"
-            android:textAlignment="textEnd"
             android:textColor="#000000" />
     </LinearLayout>
 
@@ -116,25 +99,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:padding="3dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/TimingHd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/event_timing_icon"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TIMING"
-            android:textColor="#000000"
-            android:textStyle="bold" />
+            app:srcCompat="@drawable/datetime" />
+
 
         <TextView
             android:id="@+id/Timing6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:layout_weight="20"
+            android:padding="3dp"
             android:text="TextView"
-            android:textAlignment="textEnd"
             android:textColor="#000000" />
     </LinearLayout>
 

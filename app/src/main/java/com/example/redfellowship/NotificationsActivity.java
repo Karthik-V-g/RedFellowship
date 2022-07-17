@@ -11,7 +11,10 @@ package com.example.redfellowship;
         import androidx.viewpager2.widget.ViewPager2;
 
         import android.graphics.drawable.ColorDrawable;
+        import android.os.Build;
         import android.os.Bundle;
+        import android.view.Window;
+        import android.view.WindowManager;
 
         import com.google.android.material.tabs.TabLayout;
 
@@ -26,6 +29,15 @@ public class NotificationsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
+        getSupportActionBar().setElevation(0);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.red));
+        }
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.red)));

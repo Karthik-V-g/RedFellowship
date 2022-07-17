@@ -1,8 +1,3 @@
-
-
-
-
-
 package com.example.redfellowship;
 
 import android.os.Bundle;
@@ -23,6 +18,7 @@ public class RequesterStatusFragment extends Fragment {
     ArrayList arrayListcontact;
     ArrayList arrayListaddress;
     ArrayList arrayListstatus;
+    ArrayList arrayListbloodtype;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +31,7 @@ public class RequesterStatusFragment extends Fragment {
         arrayListcontact = new ArrayList();
         arrayListaddress = new ArrayList();
         arrayListstatus = new ArrayList();
+        arrayListbloodtype = new ArrayList();
 
         for(int i=0; i<DonorStatusDetails_NotificationsData.DonorNames.length; i++)
         {
@@ -42,8 +39,9 @@ public class RequesterStatusFragment extends Fragment {
             arrayListcontact.add(DonorStatusDetails_NotificationsData.DonorContact);
             arrayListaddress.add(DonorStatusDetails_NotificationsData.DonorAddress);
             arrayListstatus.add(DonorStatusDetails_NotificationsData.DonorStatus);
+            arrayListbloodtype.add(DonorStatusDetails_NotificationsData.Bloodtypes);
         }
-        DonorStatusNotificationsHelperAdapter helperAdapter = new DonorStatusNotificationsHelperAdapter(getContext(), arrayListname, arrayListcontact, arrayListaddress, arrayListstatus);
+        DonorStatusNotificationsHelperAdapter helperAdapter = new DonorStatusNotificationsHelperAdapter(getContext(), arrayListname, arrayListcontact, arrayListaddress, arrayListstatus, arrayListbloodtype);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(helperAdapter);

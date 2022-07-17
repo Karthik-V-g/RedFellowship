@@ -9,37 +9,34 @@
     android:orientation="vertical"
     tools:context=".NotificationsActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="#000000" />
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayouta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ff0000"
-        android:elevation="5dp"
+        android:background="@color/red"
+        android:elevation="10dp"
         app:tabIndicatorColor="#ffffff"
         app:tabSelectedTextColor="#ffffff"
-        app:tabTextColor="#ff726f">
+        app:tabTextColor="#e1e1e1">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DONOR STATUS" />
+            android:textAllCaps="false"
+            android:text="Request Alert" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="REQUESTER STATUS" />
+            android:textAllCaps="false"
+            android:text="Donor Availability" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:text="GENERAL" />
     </com.google.android.material.tabs.TabLayout>
-
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager2a"
@@ -49,6 +46,5 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:background="#ffffff" />
-
 
 </LinearLayout>

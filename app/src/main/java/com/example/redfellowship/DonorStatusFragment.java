@@ -18,7 +18,7 @@ public class DonorStatusFragment extends Fragment {
     ArrayList arrayListbloodtype;
     ArrayList arrayListcontact;
     ArrayList arrayListaddress;
-
+    ArrayList arrayListduedate;
 
 
     @Override
@@ -32,6 +32,7 @@ public class DonorStatusFragment extends Fragment {
         arrayListbloodtype = new ArrayList();
         arrayListcontact = new ArrayList();
         arrayListaddress = new ArrayList();
+        arrayListduedate = new ArrayList();
 
         for(int i=0; i<DonorStatusDetails_NotificationsData.DonorNames.length; i++)
         {
@@ -39,13 +40,13 @@ public class DonorStatusFragment extends Fragment {
             arrayListbloodtype.add(DonorStatusDetails_NotificationsData.Bloodtypes);
             arrayListcontact.add(DonorStatusDetails_NotificationsData.DonorContact);
             arrayListaddress.add(DonorStatusDetails_NotificationsData.DonorAddress);
+            arrayListduedate.add(DonorStatusDetails_NotificationsData.RequesterDueDate);
 
         }
-        ActualDonorStatusNotificationsHelperAdapter helperAdapter = new ActualDonorStatusNotificationsHelperAdapter(getContext(), arrayListname, arrayListbloodtype,arrayListcontact, arrayListaddress);
+        ActualDonorStatusNotificationsHelperAdapter helperAdapter = new ActualDonorStatusNotificationsHelperAdapter(getContext(), arrayListname, arrayListbloodtype,arrayListcontact, arrayListaddress, arrayListduedate);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(helperAdapter);
-
         return view;
     }
 }

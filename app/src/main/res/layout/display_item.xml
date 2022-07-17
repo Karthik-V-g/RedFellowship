@@ -37,6 +37,23 @@
             android:textColor="@color/red_dark_variant" />
 
         <ImageView
+            android:id="@+id/req_bloodtype_icon"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_bloodtype_24"
+            app:tint="#000000" />
+
+        <TextView
+            android:id="@+id/et_blood_typebb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="AB+"
+            android:textColor="#000000" />
+
+        <ImageView
             android:id="@+id/call"
             android:layout_width="40dp"
             android:layout_height="31dp"
