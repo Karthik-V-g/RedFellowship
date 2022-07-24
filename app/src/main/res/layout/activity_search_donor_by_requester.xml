@@ -7,10 +7,10 @@
     android:background="#e1e1e1">
 
     <LinearLayout
-        android:id="@+id/linearlayout"
+        android:id="@+id/linearlayoutdemo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#e1e1e1"
+        android:background="#FFFFFF"
         android:orientation="vertical"
         tools:context=".SearchDonorByRequester">
 
@@ -230,7 +230,8 @@
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:background="#e1e1e1" />
+            android:background="#e1e1e1"
+            android:paddingBottom="10dp" />
 
 
     </LinearLayout>

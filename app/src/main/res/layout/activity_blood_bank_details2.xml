@@ -60,7 +60,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/Viewb"
+                            android:id="@+id/Viewa"
                             android:layout_width="37dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -69,7 +69,7 @@
 
 
                         <TextView
-                            android:id="@+id/BBContact2"
+                            android:id="@+id/sbbname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="20"
@@ -97,7 +97,7 @@
 
 
                         <TextView
-                            android:id="@+id/BBAddress2"
+                            android:id="@+id/sdage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="20"

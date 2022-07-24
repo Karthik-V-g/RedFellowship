@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
     android:background="@drawable/layout_blank_roundedcorner"
     android:orientation="vertical"
     android:padding="10dp">
@@ -13,8 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="7dp"
         android:orientation="horizontal">
 
@@ -27,31 +30,14 @@
             app:srcCompat="@drawable/ic_gender_black" />
 
         <TextView
-            android:id="@+id/et_name"
+            android:id="@+id/sbbname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="20"
             android:padding="5dp"
             android:text="TextView"
-            android:textStyle="bold"
-            android:textColor="@color/red_dark_variant" />
-
-        <ImageView
-            android:id="@+id/req_bloodtype_icon"
-            android:layout_width="24dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_baseline_bloodtype_24"
-            app:tint="#000000" />
-
-        <TextView
-            android:id="@+id/et_blood_typebb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:text="AB+"
-            android:textColor="#000000" />
+            android:textColor="@color/red_dark_variant"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -59,8 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="7dp"
         android:orientation="horizontal">
 
@@ -74,15 +60,25 @@
             app:tint="#000000" />
 
         <TextView
+            android:id="@+id/sbbbloodtype"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp"
+            android:text="AB+"
+            android:textAlignment="center"
+            android:textColor="@color/red_dark_variant"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="3dp"
             android:text="Blood units available:"
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/et_blood_units"
+            android:id="@+id/sbbunits"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="6"
@@ -107,8 +103,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="7dp"
         android:orientation="horizontal">
 
@@ -121,7 +117,7 @@
             app:srcCompat="@drawable/ic_address_black" />
 
         <TextView
-            android:id="@+id/et_address"
+            android:id="@+id/sbbaddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="20"
@@ -141,7 +137,6 @@
             app:srcCompat="@drawable/map"
             tools:ignore="MissingClass" />
     </LinearLayout>
-
 
 
 </LinearLayout>

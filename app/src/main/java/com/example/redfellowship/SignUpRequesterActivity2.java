@@ -1,5 +1,6 @@
 package com.example.redfellowship;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -8,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,6 +21,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -34,6 +37,9 @@ public class SignUpRequesterActivity2 extends AppCompatActivity {
     private View l1, l2;
     private RadioButton genderradioButton;
     private RadioGroup radioGroup;
+    private ImageView img1,img2;
+    private  Button btn;
+    private  final int GALLERY_REQ_CODE=1000;
 
     DatePickerDialog.OnDateSetListener onDOBDateSetListener, onLastDonationDateSetListener;
 
@@ -173,5 +179,32 @@ public class SignUpRequesterActivity2 extends AppCompatActivity {
         };
         /*-------------------------------------------------------------------------------------------*/
 
+        img1=findViewById(R.id.image);
+        img2=findViewById(R.id.logo);
+        btn=findViewById(R.id.btnPicture);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iGallery = new Intent(Intent.ACTION_PICK);
+                iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                //Toast.makeText(getApplicationContext(),"1", Toast.LENGTH_SHORT).show();
+                startActivityForResult(iGallery,GALLERY_REQ_CODE);
+
+            }
+        });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode==RESULT_OK){
+            if(requestCode==GALLERY_REQ_CODE){
+                img2.setVisibility(View.GONE);
+                img1.setVisibility(View.VISIBLE);
+                img1.setImageURI(data.getData());
+            }
+        }
     }
 }

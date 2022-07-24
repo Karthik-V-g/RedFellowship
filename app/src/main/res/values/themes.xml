@@ -13,12 +13,21 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="BackgroungImageStyle" parent="Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">false</item>
         <item name="android:background">@android:color/white</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+    <style name="Theme.RedFellowship.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RedFellowship.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RedFellowship.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

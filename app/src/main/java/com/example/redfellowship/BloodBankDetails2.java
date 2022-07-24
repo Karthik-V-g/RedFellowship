@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -37,8 +36,8 @@ TextView tv1,tv2,tv3;
        // Toast.makeText(this, "bbname"+bbname, Toast.LENGTH_SHORT).show();
 
         tv1=findViewById(R.id.BBName2);
-        tv2=findViewById(R.id.BBContact2);
-        tv3=findViewById(R.id.BBAddress2);
+        tv2=findViewById(R.id.sbbname);
+        tv3=findViewById(R.id.sdage);
 
         tv1.setText(bbname);
         tv2.setText(bbcontact);

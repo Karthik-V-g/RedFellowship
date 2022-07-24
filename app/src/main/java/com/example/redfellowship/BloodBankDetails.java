@@ -60,7 +60,7 @@ public class BloodBankDetails extends AppCompatActivity {
         });
 
         /*-------------------------------------------------------------------------------------------*/
-        recyclerView=findViewById(R.id.recyclerview2);
+        recyclerView=findViewById(R.id.recyclerview3);
         modelList=new ArrayList<>();
 
         recyclerView.setLayoutManager((new LinearLayoutManager(this)));

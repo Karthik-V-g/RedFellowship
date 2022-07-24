@@ -24,14 +24,20 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.redfellowship.Model.RowModel;
+import com.example.redfellowship.Model.RowModelSearchDonor;
+import com.example.redfellowship.MyAdapter.AdapterSearchDonor;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class DonorFragment extends Fragment {
     RecyclerView recyclerView;
-    ArrayList name,bloodtype,address;
+    AdapterSearchDonor myAdapter;
+    List<RowModelSearchDonor> modelList;
     AutoCompleteTextView bloodGroup;
     ArrayAdapter<String> adapterItems;
 
@@ -45,22 +51,26 @@ public class DonorFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_donor, container, false);
+
         recyclerView=view.findViewById(R.id.recyclerview);
+        modelList=new ArrayList<>();
 
-        String[] blood_group_list =  getResources().getStringArray(R.array.Blood_Group);
-        name=new ArrayList();
-        bloodtype=new ArrayList();
-        address=new ArrayList();
-        for (int i=0;i<Data.names.length;i++){
-            name.add(Data.names);
-            bloodtype.add(Data.BloodType);
-            address.add(Data.Address);
+        recyclerView.setLayoutManager((new LinearLayoutManager(getContext())));
+        modelList.add(new RowModelSearchDonor( "Lisa","A+","26","02/03/2022","AHE Street,XYZ Road, Erode",R.drawable.face3));
+        modelList.add(new RowModelSearchDonor("Max","A+","30","13/05/2021","123-Vision Street, Chennai",R.drawable.face1));
+        modelList.add(new RowModelSearchDonor(  "Ben", "A+","25","21/01/202","Globe Garden, KK Road, Coimbatore",R.drawable.face2));
+
+        for(int i=0;i<2;i++)
+        {
+         /*   RowModel rowModel=new RowModel("Sura Erode bank","8767656765","RKV Road, PL Palayam, Erode");
+            modelList.add(rowModel);*/
+            modelList.add(new RowModelSearchDonor(  "Ben", "A+","25","21/01/202","Globe Garden, KK Road, Coimbatore",R.drawable.face2));
         }
-        HelperAdapter helperAdapter=new HelperAdapter(getContext(),name,bloodtype,address);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(helperAdapter);
 
+        myAdapter=new AdapterSearchDonor(getContext(),modelList);
+        recyclerView.setAdapter(myAdapter);
+      /*-----------------------------------------------------------------------------------------------------------*/
+        String[] blood_group_list =  getResources().getStringArray(R.array.Blood_Group);
         open=view.findViewById(R.id.sendmsgtoall);
         open.setOnClickListener(new View.OnClickListener() {
             @Override
