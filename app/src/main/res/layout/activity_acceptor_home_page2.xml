@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/home_scroll_view"
     android:background="#ef5350">
 
     <LinearLayout
@@ -76,7 +77,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Search Donor"
+                            android:text="Find your Donor"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -117,7 +118,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/HuaweiIdSignOutButton1"
+                    android:id="@+id/Donation_Tips_CV"
                     android:layout_width="154dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="25dp"
@@ -137,12 +138,14 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            app:srcCompat="@drawable/logout" />
+                            app:srcCompat="@drawable/health_care"
+                            app:tint="@color/red"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sign Out"
+                            android:text="Donator's Guide"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -161,7 +164,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/notifications"
+                    android:id="@+id/profile"
                     android:layout_width="154dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="20dp"
@@ -179,12 +182,13 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            app:srcCompat="@drawable/ic_baseline_notifications_active_24" />
+                            app:srcCompat="@drawable/profile_update"
+                            app:tint="@color/red" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Notifications"
+                            android:text="Profile Update"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -193,7 +197,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/profile"
+                    android:id="@+id/info"
                     android:layout_width="154dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="20dp"
@@ -212,12 +216,13 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            app:srcCompat="@drawable/profile_update" />
+                            app:srcCompat="@drawable/donation"
+                            app:tint="@color/red" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Profile Update"
+                            android:text="The Blood Story"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
@@ -227,7 +232,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/HuaweiIdCancelAuthButton1"
+                    android:id="@+id/Health_Tips_CV"
                     android:layout_width="154dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="20dp"
@@ -247,12 +252,12 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            app:srcCompat="@drawable/cancelauth" />
+                            app:srcCompat="@drawable/blood_health_tips"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cancel_authorization"
+                            android:text="Healthy You"
                             android:textAlignment="center"
                             android:textColor="#000000"
                             android:textSize="15sp" />
@@ -267,6 +272,35 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/request_accepted_notification"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/red">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="2 donors have accepted your request!"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/grey_roundedcornerborder"
+                android:backgroundTint="@color/red_light_variant"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+
+
     </LinearLayout>
+
+
 
 </ScrollView>

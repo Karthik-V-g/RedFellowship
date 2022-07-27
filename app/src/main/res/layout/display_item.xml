@@ -15,7 +15,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image"
         android:layout_width="60dp"
-        android:layout_height="match_parent"
+        android:layout_height="82dp"
         android:layout_centerInParent="true"
         android:src="@drawable/face3"
         app:civ_border_color="#000000"
@@ -70,15 +70,6 @@
                 android:text="AB+"
                 android:textColor="#000000" />
 
-            <ImageView
-                android:id="@+id/call"
-                android:layout_width="40dp"
-                android:layout_height="31dp"
-                android:layout_alignParentRight="true"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/phone_blue"
-                tools:ignore="MissingClass" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -99,24 +90,21 @@
 
             <TextView
                 android:id="@+id/sbbaddress"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="20"
                 android:padding="4dp"
                 android:text="TextView"
                 android:textColor="@color/black" />
 
-            <ImageView
-                android:id="@+id/btnLocation"
-                android:layout_width="40dp"
-                android:layout_height="31dp"
-                android:layout_alignParentRight="true"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/map"
-                tools:ignore="MissingClass" />
-
         </LinearLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="82dp"
+        app:srcCompat="@drawable/next_icon" />
 
 </LinearLayout>

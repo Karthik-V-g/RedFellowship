@@ -41,7 +41,6 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
         ActualDonorStatusNotificationsHelperAdapter.ViewHolderClass viewHolderClass=new ActualDonorStatusNotificationsHelperAdapter.ViewHolderClass(view);
         return viewHolderClass;
     }
-
     public void onClickDialog(View view){
 
         builder = new AlertDialog.Builder(view.getRootView().getContext());
@@ -66,8 +65,13 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
                         btn.setTextColor(Color.parseColor("#ef5350"));
                         btn.setText("Declined");
                     }
+                })
+                .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
                 });
-
         builder.show();
 
     }

@@ -20,12 +20,13 @@ Boolean status=true;
 
         switch(position){
             case 1:
-                return new RequesterStatusFragment();
+                if(status){return new DonorStatusFragment();}
+                else {return new BlankDonorStatusFragment();}
             case 2:
                 return new RequesterGeneralFragment();
             default:
-                if(status){return new DonorStatusFragment();}
-                else {return new BlankDonorStatusFragment();}
+                return new RequesterStatusFragment();
+
         }
     }
 

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Health_Tips_Activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nutrition for Healthy Blood"
+            android:padding="10dp"
+            android:paddingTop="18dp"
+            android:textColor="@color/red_dark_variant"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Blood is essential to life. It carries oxygen and essential nutrients to all the organs of the body. Maintaining good blood health can ensure our organs and body tissues function effectively. It can also prevent anaemia and improve your general health. Hence, it is necessary to ensure that your body receives the necessary nutrients required for healthy blood."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key nutrients needed for maintaining blood health"
+            android:padding="10dp"
+            android:paddingTop="18dp"
+            android:textColor="@color/red_dark_variant"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/tick_bullet_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Iron"
+                android:textStyle="bold"
+                android:textColor="#22488C"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="Iron is vital for haemoglobin production. Nearly 70% of the body’s iron is present as haemoglobin in the red blood cells and as myoglobin in the muscle cells."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingLeft="20dp"
+            android:text="The Health Promotion Board recommends 6mg of iron for adult males aged 18 and above. Women aged between 18 and 59 require 19mg of iron, while women aged 60 years and above require 6mg of iron a day."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingLeft="20dp"
+            android:text="Iron in food comes from two sources- animals and plants. Iron from animal sources includes red meats, poultry and fish. Good plant sources of iron include fortified cereals, beans, lentils, tofu, spinach, dried fruits (apricots, prunes, raisins), prune juice, enriched bread, and nuts.
+"
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/tick_bullet_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Vitamin B12"
+                android:textStyle="bold"
+                android:textColor="#22488C"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="Vitamin B12 is another important nutrient that helps to create and regulate the functions of DNA. It is also required for red blood cell production and hence a deficiency in vitamin B12 may cause anaemia."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:text="The recommended daily amount of vitamin B12 for adults is 2.4 micrograms. Vitamin B12 is naturally found in animal products, including fish, meat, poultry, eggs, milk, and in most dairy products. Vitamin B12 is generally not present in plant foods, but fortified breakfast cereals are a readily available source of vitamin B12."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:text="Eating a balanced diet consisting of all the essential nutrients is the simplest and fundamental way to maintain your blood health, in turn contributing to your overall health."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/tick_bullet_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Folic Acid"
+                android:textStyle="bold"
+                android:textColor="#22488C"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="Folic acid supports the formation of red blood cells. A deficiency of folic acid can increase the risk of anaemia."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:text="The recommended daily amount of folic acid for adults is 400 micrograms (mcg). An adult woman who is pregnant or is planning a pregnancy is advised to increase their intake to 800 mcg of folic acid a day."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:text="Food rich in folic acid includes dark green leafy vegetables, beans, peas and nuts. Fruits rich in folate include oranges, lemons, bananas, melons and strawberries."
+            android:textColor="#090909"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</ScrollView>

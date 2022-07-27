@@ -17,7 +17,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
 
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -29,14 +28,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RedFellowship">
         <activity
+            android:name=".Health_Tips_Activity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".Donators_Guide_Activity"
+            android:exported="false" />
+        <activity
             android:name=".SearchDonor2"
             android:exported="false"
             android:label="Donor"
             android:parentActivityName=".SearchDonorByRequester" />
-        <activity
-            android:name=".MainActivity4"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".HuaweiLoginProfileDetails"
             android:exported="false" />

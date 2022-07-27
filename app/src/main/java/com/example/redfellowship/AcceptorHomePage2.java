@@ -31,8 +31,8 @@ import com.huawei.hms.support.account.service.AccountAuthService;
 import java.util.Objects;
 
 public class AcceptorHomePage2 extends AppCompatActivity {
-    private CardView search,bloodbank,signout,profile,notificatons,cancelauthorization;
-
+    private CardView search,bloodbank,donation_tips,profile,notificatons,health_tips;
+    private View accepted_requests;
 
     private AccountAuthService mAuthService;
     private AccountAuthParams mAuthParam;
@@ -114,27 +114,49 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-       notificatons=findViewById(R.id.notifications);
+        notificatons=findViewById(R.id.info);
         notificatons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AcceptorHomePage2.this,NotificationsActivity.class));
+
+                MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(AcceptorHomePage2.this);
+                builder.setTitle("Why should you donate blood?");
+                builder.setMessage(R.string.des);
+                builder.setBackground(getResources().getDrawable(R.drawable.layout_design,null));
+                builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                builder.show();
+
             }
         });
 
-        signout=findViewById(R.id.HuaweiIdSignOutButton1);
-        signout.setOnClickListener(new View.OnClickListener() {
+        donation_tips=findViewById(R.id.Donation_Tips_CV);
+        donation_tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signOut();
+                startActivity(new Intent(AcceptorHomePage2.this,Donators_Guide_Activity.class));
             }
         });
 
-        cancelauthorization=findViewById(R.id.HuaweiIdCancelAuthButton1);
-        cancelauthorization.setOnClickListener(new View.OnClickListener() {
+        health_tips=findViewById(R.id.Health_Tips_CV);
+        health_tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cancelAuthorization();
+                startActivity(new Intent(AcceptorHomePage2.this,Health_Tips_Activity.class));
+            }
+        });
+
+        accepted_requests=findViewById(R.id.request_accepted_notification);
+        accepted_requests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AcceptorHomePage2.this, NotificationsActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -152,17 +174,8 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             case R.id.action_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
-                MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(AcceptorHomePage2.this);
-                builder.setTitle("Why should you donate blood?");
-                builder.setMessage(R.string.des);
-                builder.setBackground(getResources().getDrawable(R.drawable.layout_design,null));
-                builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-                builder.show();
+                Intent intent = new Intent(AcceptorHomePage2.this, NotificationsActivity.class);
+                startActivity(intent);
                 return true;
 
             default:
@@ -172,7 +185,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
 
         }
     }
-
+/*
     private void signOut() {
         if (mAuthService == null) {
             return;
@@ -220,7 +233,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
         });
     }
 
-
+*/
     boolean doubleBackToExitPressedOnce=false;
     public void onBackPressed() {
 
