@@ -12,6 +12,11 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Camera permission -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- Audio recording permission -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
+
 
     <application
         android:allowBackup="true"
@@ -23,11 +28,11 @@
         android:roundIcon="@drawable/logo4"
         android:supportsRtl="true"
         android:theme="@style/Theme.RedFellowship">
-
-        <activity android:name=".SearchDonor2"
+        <activity
+            android:name=".SearchDonor2"
             android:exported="false"
-            android:parentActivityName=".SearchDonorByRequester"
-            android:label="Donor"/>
+            android:label="Donor"
+            android:parentActivityName=".SearchDonorByRequester" />
         <activity
             android:name=".MainActivity4"
             android:exported="false"
