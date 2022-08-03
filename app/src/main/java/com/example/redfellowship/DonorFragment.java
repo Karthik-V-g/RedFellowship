@@ -1,16 +1,9 @@
 package com.example.redfellowship;
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +13,13 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.redfellowship.Model.RowModel;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.redfellowship.Model.RowModelSearchDonor;
 import com.example.redfellowship.MyAdapter.AdapterSearchDonor;
 
@@ -56,15 +51,15 @@ public class DonorFragment extends Fragment {
         modelList=new ArrayList<>();
 
         recyclerView.setLayoutManager((new LinearLayoutManager(getContext())));
-        modelList.add(new RowModelSearchDonor( "Lisa","A+","26","02/03/2022","AHE Street,XYZ Road, Erode",R.drawable.face3));
-        modelList.add(new RowModelSearchDonor("Max","A+","30","13/05/2021","123-Vision Street, Chennai",R.drawable.face1));
-        modelList.add(new RowModelSearchDonor(  "Ben", "A+","25","21/01/202","Globe Garden, KK Road, Coimbatore",R.drawable.face2));
+        modelList.add(new RowModelSearchDonor( "Lisa","A+","26","02/03/2022","AHE Street,XYZ Road, Erode",R.drawable.face3,"11.3410","77.7172"));
+        modelList.add(new RowModelSearchDonor("Max","A+","30","13/05/2021","123-Vision Street, Chennai",R.drawable.face1,"13.0827","80.2707"));
+        modelList.add(new RowModelSearchDonor(  "Ben", "A+","25","21/01/202","Globe Garden, KK Road, Coimbatore",R.drawable.face2,"11.0168","76.9558"));
 
         for(int i=0;i<2;i++)
         {
          /*   RowModel rowModel=new RowModel("Sura Erode bank","8767656765","RKV Road, PL Palayam, Erode");
             modelList.add(rowModel);*/
-            modelList.add(new RowModelSearchDonor(  "Ben", "A+","25","21/01/202","Globe Garden, KK Road, Coimbatore",R.drawable.face2));
+            modelList.add(new RowModelSearchDonor(  "Ben", "A+","25","21/01/202","Globe Garden, KK Road, Coimbatore",R.drawable.face2,"11.0168","76.9558"));
         }
 
         myAdapter=new AdapterSearchDonor(getContext(),modelList);

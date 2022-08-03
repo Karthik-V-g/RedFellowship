@@ -20,6 +20,7 @@
 
 package com.example.redfellowship;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -38,10 +39,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.redfellowship.utils.CurrentLocation;
+import com.example.redfellowship.utils.MapUtils;
 import com.example.redfellowship.utils.NetworkRequestManager;
 import com.huawei.hms.maps.CameraUpdate;
 import com.huawei.hms.maps.CameraUpdateFactory;
 import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.MapsInitializer;
 import com.huawei.hms.maps.OnMapReadyCallback;
 import com.huawei.hms.maps.SupportMapFragment;
 import com.huawei.hms.maps.model.LatLng;
@@ -81,9 +85,9 @@ public class RouteMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private EditText edtDestinationLng;
 
-    private LatLng latLng1 = new LatLng(54.216608, -4.66529);
+    private LatLng latLng1 = new LatLng(11.0168, 76.9558);
 
-    private LatLng latLng2 = new LatLng(54.209673, -4.64002);
+    private LatLng latLng2 = new LatLng(CurrentLocation.lat, CurrentLocation.lon);
 
     private List<Polyline> mPolylines = new ArrayList<>();
 
@@ -112,9 +116,10 @@ public class RouteMap extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MapsInitializer.initialize(this);
+        MapsInitializer.setApiKey(MapUtils.API_KEY);
         setContentView(R.layout.activity_route_map);
-
-        getSupportActionBar().setElevation(0);
+        getSupportActionBar().hide();
         Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.red)));
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -133,11 +138,17 @@ public class RouteMap extends AppCompatActivity implements OnMapReadyCallback {
         edtOriginLng = findViewById(R.id.edt_origin_lng);
         edtDestinationLat = findViewById(R.id.edt_destination_lat);
         edtDestinationLng = findViewById(R.id.edt_destination_lng);
+
+        Intent intent=getIntent();
+        latLng1.latitude=Double.parseDouble(intent.getStringExtra("sdlatitude"));
+        latLng1.longitude=Double.parseDouble(intent.getStringExtra("sdlongitude"));
+
     }
 
     @Override
     public void onMapReady(HuaweiMap huaweiMap) {
         hMap = huaweiMap;
+        hMap.setMyLocationEnabled(true);
         hMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng1, 13));
         addOriginMarker(latLng1);
         addDestinationMarker(latLng2);

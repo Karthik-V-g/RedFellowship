@@ -6,12 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.redfellowship.BloodBankDetails;
 import com.example.redfellowship.BloodBankDetails2;
 import com.example.redfellowship.Model.RowModel;
 import com.example.redfellowship.R;
@@ -63,11 +61,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyHolder> {
         @Override
         public void onClick(View v) {
             int position=getAbsoluteAdapterPosition();
-           // Toast.makeText(context,"position"+position,Toast.LENGTH_SHORT).show();
+          // Toast.makeText(context,"position"+position,Toast.LENGTH_SHORT).show();
             Intent intent =new Intent(context, BloodBankDetails2.class);
             intent.putExtra("bbname",modelList.get(position).getBbname());
             intent.putExtra("bbcontact",modelList.get(position).getBbcontact());
             intent.putExtra("bbaddress",modelList.get(position).getBbaddress());
+            intent.putExtra("bblat",modelList.get(position).getBblat());
+            intent.putExtra("bblon",modelList.get(position).getBblon());
             context.startActivity(intent);
 
 

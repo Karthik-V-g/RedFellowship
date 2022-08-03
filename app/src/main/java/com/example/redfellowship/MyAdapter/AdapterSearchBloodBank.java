@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,17 +53,32 @@ public class AdapterSearchBloodBank extends RecyclerView.Adapter<AdapterSearchBl
         return modelList.size();
     }
 
-    class MyHolder extends RecyclerView.ViewHolder{
-        TextView name,bloodtype,units,address;
-        CircleImageView image;
+    class MyHolder extends RecyclerView.ViewHolder implements  View.OnClickListener
+        {
+            TextView name,bloodtype,units,address;
+            CircleImageView image;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.sbbname);
             bloodtype=itemView.findViewById(R.id.sbbbloodtype);
             units=itemView.findViewById(R.id.sbbunits);
             address=itemView.findViewById(R.id.sbbaddress);
+            itemView.setOnClickListener(this);
 
         }
 
+
+            public void onClick(View v) {
+            int position=getAbsoluteAdapterPosition();
+            Toast.makeText(context,"position"+position,Toast.LENGTH_SHORT).show();
+          /* Intent intent =new Intent(context, SearchDonor2.class);
+            intent.putExtra("sdname",modelList.get(position).getsdname());
+            intent.putExtra("sdbloodtype",modelList.get(position).getsdbloodtype());
+            context.startActivity(intent);*/
+
+
+
+
+        }
     }
 }

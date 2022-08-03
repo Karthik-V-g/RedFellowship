@@ -1,31 +1,27 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.huawei.hms.support.account.request.AccountAuthParams;
-import com.huawei.hms.support.account.service.AccountAuthService;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
 import com.huawei.hmf.tasks.Task;
 import com.huawei.hms.common.ApiException;
 import com.huawei.hms.support.account.AccountAuthManager;
+import com.huawei.hms.support.account.request.AccountAuthParams;
 import com.huawei.hms.support.account.request.AccountAuthParamsHelper;
 import com.huawei.hms.support.account.result.AuthAccount;
-
-
-import android.widget.Toast;
-
-import java.util.Objects;
+import com.huawei.hms.support.account.service.AccountAuthService;
 
 public class LoginRequesterActivity extends AppCompatActivity {
 
@@ -61,7 +57,7 @@ public class LoginRequesterActivity extends AppCompatActivity {
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //  startActivity(new Intent(LoginRequesterActivity.this, AcceptorHomePage2.class));
+                    startActivity(new Intent(LoginRequesterActivity.this, AcceptorHomePage2.class));
                 }
             });
 

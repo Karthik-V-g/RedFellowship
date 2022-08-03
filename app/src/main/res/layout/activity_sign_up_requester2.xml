@@ -8,7 +8,7 @@
     android:fillViewport="true"
     android:orientation="vertical"
     android:paddingLeft="18dp"
-    android:paddingTop="16dp"
+    android:paddingTop="10dp"
     android:paddingRight="18dp"
     android:paddingBottom="16dp"
     tools:context=".SignUpRequesterActivity2">
@@ -21,7 +21,8 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="144dp"
+            android:layout_height="147dp"
+            android:layout_marginBottom="10dp"
             android:padding="10dp"
             app:srcCompat="@drawable/logo4" />
 
@@ -30,11 +31,28 @@
             android:layout_width="match_parent"
             android:layout_height="172dp"
             android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
             android:visibility="gone"
             app:civ_border_color="#000000"
             app:civ_border_width="1dp" />
 
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/grey_roundedcornerborder"
+            android:backgroundTint="@color/light_blue"
+            android:drawablePadding="12dp"
+            android:drawableTint="@color/black"
+            android:padding="10dp"
+            android:text="Upload Profile Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            tools:ignore="MissingClass" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutName1"
@@ -273,6 +291,7 @@
                 android:hint="Address"
                 android:inputType="text"
                 tools:ignore="TouchTargetSizeCheck" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -309,23 +328,6 @@
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnPicture"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/grey_roundedcornerborder"
-            android:backgroundTint="#D1D8E1"
-            android:drawablePadding="12dp"
-            android:drawableTint="@color/black"
-            android:padding="10dp"
-            android:text="Upload Profile Picture"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textStyle="normal"
-            tools:ignore="MissingClass" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLocation"
             android:layout_width="match_parent"

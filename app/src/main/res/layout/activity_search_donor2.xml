@@ -194,7 +194,7 @@
                 tools:ignore="MissingClass" />
 
             <ImageView
-                android:id="@+id/map_icon"
+                android:id="@+id/map"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_gravity="center_vertical"

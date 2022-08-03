@@ -1,19 +1,22 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
 public class BloodBankDetails2 extends AppCompatActivity {
 TextView tv1,tv2,tv3;
+ImageView map;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,17 @@ TextView tv1,tv2,tv3;
         String bbcontact=intent.getStringExtra("bbcontact");
         String bbaddress=intent.getStringExtra("bbaddress");
        // Toast.makeText(this, "bbname"+bbname, Toast.LENGTH_SHORT).show();
+        map=findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 Intent intent1=new Intent(BloodBankDetails2.this,RouteMap.class);
+                 intent1.putExtra("sdlatitude",intent.getStringExtra("bblat"));
+                 intent1.putExtra("sdlongitude",intent.getStringExtra("bblon"));
+                 startActivity(intent1);
+
+            }
+        });
 
         tv1=findViewById(R.id.BBName2);
         tv2=findViewById(R.id.sbbname);

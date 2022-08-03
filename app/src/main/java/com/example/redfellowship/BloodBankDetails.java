@@ -1,9 +1,5 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +10,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.redfellowship.Model.RowModel;
 import com.example.redfellowship.MyAdapter.Adapter;
@@ -64,13 +64,13 @@ public class BloodBankDetails extends AppCompatActivity {
         modelList=new ArrayList<>();
 
         recyclerView.setLayoutManager((new LinearLayoutManager(this)));
-        modelList.add(new RowModel("Lions Club Blood Bank","9967656765","Brough Road, Bazar Street, Salem"));
-        modelList.add(new RowModel("Uyir Agaval Donations","67123456765","South Street, Manickam Road, Tiruppur"));
-        modelList.add(new RowModel("Blood Alert Foundations","7734340234","Anna Nagar, Chennai"));
+        modelList.add(new RowModel("Lions Club Blood Bank","9967656765","Brough Road, Bazar Street, Salem","11.6643","78.1460"));
+        modelList.add(new RowModel("Uyir Agaval Donations","67123456765","South Street, Manickam Road, Tiruppur","11.1085","77.3411"));
+        modelList.add(new RowModel("Blood Alert Foundations","7734340234","Anna Nagar, Chennai","13.0827","80.2707"));
 
         for(int i=0;i<2;i++)
         {
-            RowModel rowModel=new RowModel("Sura Erode bank","8767656765","RKV Road, PL Palayam, Erode");
+            RowModel rowModel=new RowModel("Sura Erode bank","8767656765","RKV Road, PL Palayam, Erode","11.3410","77.7172");
             modelList.add(rowModel);
         }
 

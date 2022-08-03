@@ -1,8 +1,5 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
@@ -16,6 +13,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.huawei.hmf.tasks.OnFailureListener;
@@ -31,12 +31,14 @@ import com.huawei.hms.support.account.service.AccountAuthService;
 import java.util.Objects;
 
 public class AcceptorHomePage2 extends AppCompatActivity {
-    private CardView search,bloodbank,donation_tips,profile,notificatons,health_tips;
+    private CardView search, bloodbank, donation_tips, profile, notificatons, health_tips;
     private View accepted_requests;
 
     private AccountAuthService mAuthService;
     private AccountAuthParams mAuthParam;
     private static final int REQUEST_CODE_SIGN_IN = 1000;
+    Double lat, lon;
+    String District;
     private static final String TAG = "Account";
 
 
@@ -66,7 +68,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
                     ApiException apiException = (ApiException) e;
                     Intent signInIntent = mAuthService.getSignInIntent();
                     startActivityForResult(signInIntent, REQUEST_CODE_SIGN_IN);
-                    startActivity(new Intent(AcceptorHomePage2.this,LoginRequesterActivity.class));
+                    startActivity(new Intent(AcceptorHomePage2.this, LoginRequesterActivity.class));
                     Toast.makeText(AcceptorHomePage2.this, "Please select email during authentication", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -74,7 +76,6 @@ public class AcceptorHomePage2 extends AppCompatActivity {
 
         super.onStart();
     }
-
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,39 +91,47 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.red));
         }
 
-        search=findViewById(R.id.search);
+
+
+
+        search = findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AcceptorHomePage2.this,SearchDonorByRequester.class));
+                Intent intent = new Intent(AcceptorHomePage2.this, SearchDonorByRequester.class);
+                intent.putExtra("lat", lat);
+                intent.putExtra("lon", lon);
+                intent.putExtra("district", District);
+                startActivity(intent);
+                //startActivity(new Intent(AcceptorHomePage2.this,SearchDonorByRequester.class));
             }
         });
 
-        bloodbank=findViewById(R.id.bloodbank);
+        bloodbank = findViewById(R.id.bloodbank);
         bloodbank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AcceptorHomePage2.this,BloodBankDetails.class));
+                startActivity(new Intent(AcceptorHomePage2.this, BloodBankDetails.class));
             }
         });
 
-        profile=findViewById(R.id.profile);
+        profile = findViewById(R.id.profile);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AcceptorHomePage2.this,ProfileActivity.class));
+                startActivity(new Intent(AcceptorHomePage2.this, ProfileActivity.class));
             }
         });
 
-        notificatons=findViewById(R.id.info);
+        notificatons = findViewById(R.id.info);
         notificatons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(AcceptorHomePage2.this);
+                MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(AcceptorHomePage2.this);
                 builder.setTitle("Why should you donate blood?");
                 builder.setMessage(R.string.des);
-                builder.setBackground(getResources().getDrawable(R.drawable.layout_design,null));
+                builder.setBackground(getResources().getDrawable(R.drawable.layout_design, null));
                 builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -133,23 +142,23 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
-        donation_tips=findViewById(R.id.Donation_Tips_CV);
+        donation_tips = findViewById(R.id.Donation_Tips_CV);
         donation_tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AcceptorHomePage2.this,Donators_Guide_Activity.class));
+                startActivity(new Intent(AcceptorHomePage2.this, Donators_Guide_Activity.class));
             }
         });
 
-        health_tips=findViewById(R.id.Health_Tips_CV);
+        health_tips = findViewById(R.id.Health_Tips_CV);
         health_tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AcceptorHomePage2.this,Health_Tips_Activity.class));
+                startActivity(new Intent(AcceptorHomePage2.this, Health_Tips_Activity.class));
             }
         });
 
-        accepted_requests=findViewById(R.id.request_accepted_notification);
+        accepted_requests = findViewById(R.id.request_accepted_notification);
         accepted_requests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,7 +169,13 @@ public class AcceptorHomePage2 extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+
+
+    /******************************************************************************************************/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -257,6 +272,7 @@ public class AcceptorHomePage2 extends AppCompatActivity {
                 @Override
                 public void onFailure(Exception e) {
                     Log.i(TAG, "signOut fail");
+                   // startActivity(new Intent(AcceptorHomePage2.this,LoginRequesterActivity.class));
                     Toast.makeText(AcceptorHomePage2.this, "Signout Failed ", Toast.LENGTH_SHORT).show();
                     // showLog("signOut fail");
                 }

@@ -1,8 +1,5 @@
 package com.example.redfellowship;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -27,6 +24,9 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
@@ -137,7 +137,7 @@ EditText mail,name;
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 genderradioButton = (RadioButton) findViewById(selectedId);
                 if(selectedId==-1){
-                    Toast.makeText(HuaweiLoginProfileDetails.this,"Nothing selected", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(HuaweiLoginProfileDetails.this,"Nothing selected", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(HuaweiLoginProfileDetails.this,genderradioButton.getText(), Toast.LENGTH_SHORT).show();}

@@ -1,11 +1,13 @@
 package com.example.redfellowship.Model;
 
 public class RowModel {
-    String bbname,bbcontact,bbaddress;
-    public RowModel(String bbname, String bbcontact, String bbaddress) {
+    String bbname,bbcontact,bbaddress,bblat,bblon;
+    public RowModel(String bbname, String bbcontact, String bbaddress,String bblat,String bblon) {
         this.bbname = bbname;
         this.bbcontact = bbcontact;
         this.bbaddress = bbaddress;
+        this.bblat=bblat;
+        this.bblon=bblon;
     }
 
     public String getBbname() {
@@ -30,6 +32,22 @@ public class RowModel {
 
     public void setBbaddress(String bbaddress) {
         this.bbaddress = bbaddress;
+    }
+
+    public String getBblat() {
+        return bblat;
+    }
+
+    public void setBblat(String bblat) {
+        this.bblat = bblat;
+    }
+
+    public String getBblon() {
+        return bblon;
+    }
+
+    public void setBblon(String bblon) {
+        this.bbaddress = bblon;
     }
 
 

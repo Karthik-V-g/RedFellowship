@@ -40,17 +40,32 @@
                     android:textAllCaps="false"
                     android:visibility="gone" />
 
+
                 <Button
-                    android:id="@+id/getDrivingRouteResult"
+                    android:id="@+id/getDrivingRouteResult1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="getDrivingRouteResult"
                     android:text="Click for Route"
                     android:textAllCaps="false"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/getDrivingRouteResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/login_button"
+                    android:onClick="getDrivingRouteResult"
+                    android:text="Click for Route"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
 
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="wrap_content"

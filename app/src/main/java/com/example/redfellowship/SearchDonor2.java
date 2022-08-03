@@ -44,13 +44,15 @@ CircleImageView image;
         int image1=Integer.parseInt(intent.getStringExtra("sdimage"));
         //Toast.makeText(this, "image"+image1, Toast.LENGTH_SHORT).show();
 
+
+
         image=findViewById(R.id.image);
         sdname=findViewById(R.id.sbbname);
         sdbloodtype=findViewById(R.id.sbbbloodtype);
         sdage=findViewById(R.id.sdage);
         sdlastdonation=findViewById(R.id.sdlastdonation);
         sdaddress=findViewById(R.id.sbbaddress);
-        map=findViewById(R.id.map_icon);
+        map=findViewById(R.id.map);
 
         image.setImageResource(image1);
         sdname.setText(name);
@@ -62,7 +64,11 @@ CircleImageView image;
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SearchDonor2.this,RouteMap.class));
+                Intent intent1=new Intent(SearchDonor2.this, RouteMap.class);
+                intent1.putExtra("sdlatitude",intent.getStringExtra("sdlatitude"));
+                intent1.putExtra("sdlongitude",intent.getStringExtra("sdlongitude"));
+                startActivity(intent1);
+
             }
         });
 

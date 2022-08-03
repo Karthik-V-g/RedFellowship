@@ -76,6 +76,8 @@ public class AdapterSearchDonor extends RecyclerView.Adapter<AdapterSearchDonor.
             intent.putExtra("sdage",modelList.get(position).getsdage());
             intent.putExtra("sdlastdonation",modelList.get(position).getsdlastdonation());
             intent.putExtra("sdaddress",modelList.get(position).getsdaddress());
+            intent.putExtra("sdlatitude",modelList.get(position).getsdlatitude());
+            intent.putExtra("sdlongitude",modelList.get(position).getsdlongitude());
             int image=modelList.get(position).getsdimage();
             String imagestr=Integer.toString(image);
             intent.putExtra("sdimage",imagestr);

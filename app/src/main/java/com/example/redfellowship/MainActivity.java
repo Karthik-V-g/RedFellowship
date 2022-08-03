@@ -1,9 +1,8 @@
 package com.example.redfellowship;
 
-import android.Manifest;
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
+import android.content.IntentSender;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,37 +11,87 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.app.ActivityCompat;
 
-import com.example.redfellowship.utils.MapUtils;
-import com.huawei.hms.maps.MapsInitializer;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.ResolvableApiException;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResponse;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 public class MainActivity extends AppCompatActivity {
 
     private CardView loginButtonDonorRequester;
 
     private CardView loginButtonBloodBank;
-    private static final String[] RUNTIME_PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET};
+    /*******************enable location**************************/
+    private static final String TAG = "MainActivity";
+    private LocationRequest locationRequest;
+    private static final int REQUEST_CHECK_SETTINGS = 10001;
+    /*******************enable location**************************/
 
-    private static final int REQUEST_CODE = 100;
+    Double lat, lon;
+    String District;
 
+/*****************************************enable location**************************/
+    @Override
+    protected void onStart() {
+
+        locationRequest = LocationRequest.create();
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(5000);
+        locationRequest.setFastestInterval(2000);
+
+        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
+                .addLocationRequest(locationRequest);
+        builder.setAlwaysShow(true);
+
+        Task<LocationSettingsResponse> result = LocationServices.getSettingsClient(getApplicationContext())
+                .checkLocationSettings(builder.build());
+
+        result.addOnCompleteListener(new OnCompleteListener<LocationSettingsResponse>() {
+            @Override
+            public void onComplete(@NonNull Task<LocationSettingsResponse> task) {
+
+                try {
+                    LocationSettingsResponse response = task.getResult(ApiException.class);
+                    Toast.makeText(MainActivity.this, "GPS is already tured on", Toast.LENGTH_SHORT).show();
+
+                } catch (ApiException e) {
+
+                    switch (e.getStatusCode()) {
+                        case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+
+                            try {
+                                ResolvableApiException resolvableApiException = (ResolvableApiException) e;
+                                resolvableApiException.startResolutionForResult(MainActivity.this, REQUEST_CHECK_SETTINGS);
+                            } catch (IntentSender.SendIntentException ex) {
+                                ex.printStackTrace();
+                            }
+                            break;
+
+                        case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                            //Device does not have location
+                            break;
+                    }
+                }
+            }
+        });
+        super.onStart();
+    }
+    /*******************enable location**************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-
-        if (!hasPermissions(MainActivity.this, RUNTIME_PERMISSIONS)) {
-            ActivityCompat.requestPermissions(this, RUNTIME_PERMISSIONS, REQUEST_CODE);
-        }
-
-
-
 
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();
@@ -50,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(this.getResources().getColor(R.color.red));
         }
+
+
 
         loginButtonDonorRequester =(CardView) findViewById(R.id.btnLoginRequester);
         loginButtonBloodBank =(CardView) findViewById(R.id.btnLoginBloodBank);
@@ -61,18 +112,28 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
-    private static boolean hasPermissions(Context context, String... permissions) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && permissions != null) {
-            for (String permission : permissions) {
-                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-                    return false;
-                }
+    /*******************enable location**************************/
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CHECK_SETTINGS) {
+
+            switch (resultCode) {
+                case Activity.RESULT_OK:
+                    Toast.makeText(this, "GPS is tured on", Toast.LENGTH_SHORT).show();
+
+                case Activity.RESULT_CANCELED:
+                    Toast.makeText(this, "GPS required to be tured on", Toast.LENGTH_SHORT).show();
             }
         }
-        return true;
     }
+    /*******************enable location**************************/
+
+
     Boolean doubleBackToExitPressedOnce=false;
     @Override
     public void onBackPressed() {

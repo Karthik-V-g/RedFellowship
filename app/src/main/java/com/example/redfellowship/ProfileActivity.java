@@ -1,17 +1,12 @@
 package com.example.redfellowship;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.provider.SyncStateContract;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -29,14 +24,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.huawei.agconnect.AGCRoutePolicy;
-import com.huawei.agconnect.AGConnectInstance;
-import com.huawei.agconnect.AGConnectOptions;
-import com.huawei.agconnect.AGConnectOptionsBuilder;
-import com.huawei.agconnect.cloud.database.AGConnectCloudDB;
-import com.huawei.agconnect.cloud.database.CloudDBZone;
-import com.huawei.agconnect.cloud.database.CloudDBZoneConfig;
-import com.huawei.agconnect.cloud.database.ListenerHandler;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.huawei.hmf.tasks.OnFailureListener;
+import com.huawei.hmf.tasks.OnSuccessListener;
+import com.huawei.hmf.tasks.Task;
+import com.huawei.hms.common.ApiException;
+import com.huawei.hms.support.account.AccountAuthManager;
+import com.huawei.hms.support.account.request.AccountAuthParams;
+import com.huawei.hms.support.account.request.AccountAuthParamsHelper;
+import com.huawei.hms.support.account.result.AuthAccount;
+import com.huawei.hms.support.account.service.AccountAuthService;
 
 import java.util.Calendar;
 import java.util.Objects;
@@ -44,7 +43,7 @@ import java.util.Objects;
 public class ProfileActivity extends AppCompatActivity {
 
 
-    private Button ButtonGoToLoginRequester,btn;
+    private Button ButtonGoToLoginRequester,btn,signout;
     private CheckBox donor;
     private EditText a, mDateDOB, mDateLastDonation;
     private View l1, l2;
@@ -56,6 +55,48 @@ public class ProfileActivity extends AppCompatActivity {
 
     AutoCompleteTextView autoCompleteTxt;
     ArrayAdapter<String> adapterItems;
+
+    private AccountAuthService mAuthService;
+    private AccountAuthParams mAuthParam;
+    private static final int REQUEST_CODE_SIGN_IN = 1000;
+    private static final String TAG = "Account";
+
+    @Override
+    protected void onStart() {
+        mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setEmail()
+                .createParams();
+
+        mAuthService = AccountAuthManager.getService(this, mAuthParam);
+
+        Task<AuthAccount> task = mAuthService.silentSignIn();
+        task.addOnSuccessListener(new OnSuccessListener<AuthAccount>() {
+            @Override
+            public void onSuccess(AuthAccount authAccount) {
+
+                // showLog("silent sign in success");
+
+
+            }
+        });
+        task.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+
+                if (e instanceof ApiException) {
+                    ApiException apiException = (ApiException) e;
+                    Intent signInIntent = mAuthService.getSignInIntent();
+                    startActivityForResult(signInIntent, REQUEST_CODE_SIGN_IN);
+                    startActivity(new Intent(ProfileActivity.this,LoginRequesterActivity.class));
+                    Toast.makeText(ProfileActivity.this, "Please select email during authentication", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        super.onStart();
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +130,14 @@ public class ProfileActivity extends AppCompatActivity {
                     Toast.makeText(ProfileActivity.this, genderradioButton.getText(), Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        signout=(Button)findViewById(R.id.btnSignOut);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
             }
         });
 
@@ -214,6 +263,29 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void signOut() {
+        if (mAuthService == null) {
+            return;
+        }
+        Task<Void> signOutTask = mAuthService.signOut();
+        signOutTask.addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.i(TAG, "signOut Success");
+                startActivity(new Intent(ProfileActivity.this,LoginRequesterActivity.class));
+                Toast.makeText(ProfileActivity.this, "Signout Succesfull ", Toast.LENGTH_SHORT).show();
+                // showLog("signOut Success");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "signOut fail");
+                Toast.makeText(ProfileActivity.this, "Signout Failed ", Toast.LENGTH_SHORT).show();
+                //  showLog("signOut fail");
+            }
+        });
     }
 
     @Override

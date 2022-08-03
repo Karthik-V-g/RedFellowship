@@ -1,24 +1,19 @@
 
 package com.example.redfellowship;
 
-        import androidx.annotation.NonNull;
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.fragment.app.Fragment;
-        import androidx.fragment.app.FragmentManager;
-        import androidx.fragment.app.FragmentPagerAdapter;
-        import androidx.fragment.app.FragmentTransaction;
-        import androidx.viewpager.widget.ViewPager;
-        import androidx.viewpager2.widget.ViewPager2;
-
         import android.graphics.drawable.ColorDrawable;
-        import android.os.Build;
-        import android.os.Bundle;
-        import android.view.Window;
-        import android.view.WindowManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
-        import com.google.android.material.tabs.TabLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 
-        import java.util.Objects;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.Objects;
 
 public class NotificationsActivity extends AppCompatActivity {
 
@@ -53,6 +48,7 @@ public class NotificationsActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager2.setCurrentItem(tab.getPosition());
+
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {

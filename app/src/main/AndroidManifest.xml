@@ -19,6 +19,7 @@
     <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
 
     <application
+        android:name=".utils.CurrentLocation"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/logo4"
@@ -33,10 +34,14 @@
             android:exported="false" />
         <activity
             android:name=".DistrictMapActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Search by District"
+            android:parentActivityName=".SearchDonorByRequester"/>
         <activity
             android:name=".CircleDemoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Search by Distance"
+            android:parentActivityName=".SearchDonorByRequester"/>
         <activity
             android:name=".Health_Tips_Activity"
             android:exported="false" />
