@@ -216,10 +216,7 @@
                 android:layout_height="wrap_content"
                 android:text="BLOOD BANK" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MAP" />
+
 
             />
         </com.google.android.material.tabs.TabLayout>
@@ -227,7 +224,7 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager2a"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="488dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:background="#e1e1e1"

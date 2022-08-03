@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
     android:background="#FFFFFF"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -18,7 +20,42 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/redbutton" />
 -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Activity 2"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/HuaweiIdSignOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/login_button"
+        android:text="Sign Out"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        tools:ignore="MissingClass" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/HuaweiIdCancelAuthButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/login_button"
+        android:text="Cancel Authorization"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        tools:ignore="MissingClass" />
 
     <ImageView
         android:id="@+id/HuaweiIdAuthButton11"
@@ -26,6 +63,7 @@
         android:layout_height="163dp"
         android:layout_gravity="center_horizontal"
         android:background="#FFFFFF"
+        android:visibility="gone"
         app:srcCompat="@drawable/huawei" />
 
 </LinearLayout>

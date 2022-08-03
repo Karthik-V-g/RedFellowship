@@ -1,31 +1,47 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.Objects;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+
+import com.example.redfellowship.utils.MapUtils;
+import com.huawei.hms.maps.MapsInitializer;
+
 public class MainActivity extends AppCompatActivity {
 
     private CardView loginButtonDonorRequester;
 
     private CardView loginButtonBloodBank;
+    private static final String[] RUNTIME_PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET};
 
+    private static final int REQUEST_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        if (!hasPermissions(MainActivity.this, RUNTIME_PERMISSIONS)) {
+            ActivityCompat.requestPermissions(this, RUNTIME_PERMISSIONS, REQUEST_CODE);
+        }
+
+
 
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -45,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private static boolean hasPermissions(Context context, String... permissions) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
     Boolean doubleBackToExitPressedOnce=false;
     @Override

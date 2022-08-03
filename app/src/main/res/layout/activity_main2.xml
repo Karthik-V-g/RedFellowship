@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity"
-android:orientation="vertical">
-
-<!--id开发者可自定义-->
-<!--id developers can customize-->
-<com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
-    android:id="@+id/HuaweiIdAuthButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
-    android:layout_gravity="center_horizontal"/>
-
-<Button
-    android:id="@+id/HuaweiIdSignOutButton"
-    android:layout_width="200dp"
-    android:background="@color/huawei_red"
-    android:layout_height="40dp"
-    android:textColor="@color/white"
-    android:layout_marginTop="15dp"
-    android:layout_gravity="center_horizontal"
-    android:text="@string/sign_out"/>
-
-<Button
-    android:id="@+id/HuaweiIdCancelAuthButton"
-    android:layout_width="200dp"
-    android:background="@color/huawei_red"
-    android:layout_height="40dp"
-    android:textColor="@color/white"
-    android:layout_marginTop="15dp"
-    android:layout_gravity="center_horizontal"
-    android:text="@string/cancel_authorization"/>
-
-<EditText
-    android:id="@+id/LogText"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--id开发者可自定义-->
+    <!--id developers can customize-->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Activity 1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/HuaweiIdAuthButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/huaweiloginbutton"
+        android:drawableLeft="@drawable/hwid_auth_button_round_white"
+        android:text="Sign in with HUAWEI ID"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        tools:ignore="MissingClass" />
+
+
+    <EditText
+        android:id="@+id/LogText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
 </LinearLayout>

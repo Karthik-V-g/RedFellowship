@@ -1,14 +1,16 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
@@ -16,6 +18,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SearchDonor2 extends AppCompatActivity {
 TextView sdname,sdbloodtype,sdage,sdlastdonation,sdaddress;
+ImageView map;
 CircleImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ CircleImageView image;
         sdage=findViewById(R.id.sdage);
         sdlastdonation=findViewById(R.id.sdlastdonation);
         sdaddress=findViewById(R.id.sbbaddress);
+        map=findViewById(R.id.map_icon);
 
         image.setImageResource(image1);
         sdname.setText(name);
@@ -55,5 +59,13 @@ CircleImageView image;
         sdlastdonation.setText(lastdonation);
         sdaddress.setText(address);
 
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SearchDonor2.this,RouteMap.class));
+            }
+        });
+
     }
+
 }

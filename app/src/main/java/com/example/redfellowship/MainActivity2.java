@@ -52,7 +52,7 @@ public class MainActivity2 extends AppCompatActivity {
                 silentSignInByHwId();
             }
         });
-        findViewById(R.id.HuaweiIdSignOutButton).setOnClickListener(new View.OnClickListener() {
+      /*  findViewById(R.id.HuaweiIdSignOutButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signOut();
@@ -64,7 +64,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 cancelAuthorization();
             }
-        });
+        });*/
         logTextView = (TextView) findViewById(R.id.LogText);
     }
 
@@ -102,7 +102,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onSuccess(AuthAccount authAccount) {
                 // 静默登录成功，处理返回的帐号对象AuthAccount，获取帐号信息
                 // Silent sign in is successful, the returned account object AuthAccount is processed,account information is obtained and processed
-                showLog("silent sign in success");
+               // showLog("silent sign in success moving to activity 2");
                 dealWithResultOfSignIn(authAccount);
             }
         });
@@ -134,10 +134,12 @@ public class MainActivity2 extends AppCompatActivity {
         Log.i(TAG, "email:" + authAccount.getEmail());
         Log.i(TAG, "openid:" + authAccount.getOpenId());
         Log.i(TAG, "unionid:" + authAccount.getUnionId());
+        startActivity(new Intent(MainActivity2.this,MainActivity3.class));
+        Toast.makeText(MainActivity2.this, "silent sign in success moving to activity 2", Toast.LENGTH_SHORT).show();
        // startActivity(new Intent(MainActivity2.this,AcceptorHomePage2.class));
-        Toast.makeText(this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
-        showLog("display name:" + authAccount.getDisplayName() + "photo uri string:" + authAccount.getAvatarUriString() +
-                "email:" + authAccount.getEmail() + "openid:" + authAccount.getOpenId() + "unionid:" + authAccount.getUnionId());
+        //Toast.makeText(this, "Login Succesfull ", Toast.LENGTH_SHORT).show();
+       // showLog("display name:" + authAccount.getDisplayName() + "photo uri string:" + authAccount.getAvatarUriString() +
+              //  "email:" + authAccount.getEmail() + "openid:" + authAccount.getOpenId() + "unionid:" + authAccount.getUnionId());
         // TODO 获取用户信息后业务逻辑
         // TODO Business logic after obtaining user information
 
@@ -199,7 +201,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Log.i(TAG, "cancelAuthorization success");
-                showLog("cancelAuthorization success");
+                showLog("cancel Authorization success");
             }
         });
         task.addOnFailureListener(new OnFailureListener() {
@@ -212,7 +214,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     private void showLog(String log) {
-        logTextView.setText("log:" + "\n" + log);
+        logTextView.setText("log: "+log);
     }
 
 

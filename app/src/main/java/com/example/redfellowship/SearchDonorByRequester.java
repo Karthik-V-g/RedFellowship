@@ -1,29 +1,25 @@
 package com.example.redfellowship;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.widget.ViewPager2;
-
-import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.example.redfellowship.utils.MapUtils;
 import com.google.android.material.tabs.TabLayout;
+import com.huawei.hms.maps.MapsInitializer;
 
 import java.util.Objects;
 
@@ -40,6 +36,8 @@ ImageView search1,search2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MapsInitializer.initialize(this);
+        MapsInitializer.setApiKey(MapUtils.API_KEY);
         setContentView(R.layout.activity_search_donor_by_requester);
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -67,6 +65,7 @@ ImageView search1,search2;
 
                 pagerAdapter=new PagerAdapter(fm,getLifecycle(),1);
                 viewPager2.setAdapter(pagerAdapter);
+                startActivity(new Intent(SearchDonorByRequester.this,DistrictMapActivity.class));
 
                 Toast.makeText(SearchDonorByRequester.this, "search1", Toast.LENGTH_SHORT).show();
 
@@ -78,7 +77,7 @@ ImageView search1,search2;
 
                 pagerAdapter=new PagerAdapter(fm,getLifecycle(),2);
                 viewPager2.setAdapter(pagerAdapter);
-
+                startActivity(new Intent(SearchDonorByRequester.this,CircleDemoActivity.class));
 
                 Toast.makeText(SearchDonorByRequester.this, "search2", Toast.LENGTH_SHORT).show();
             }
