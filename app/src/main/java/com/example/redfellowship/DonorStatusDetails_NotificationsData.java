@@ -17,6 +17,13 @@ public class DonorStatusDetails_NotificationsData {
     public static String[] RequesterDueDate=new String[]{
             "5.00 PM, 21/7/22","12.00 PM, 12/7/22","9.00 PM, 17/7/22"
     };
+    public static String[] RequesterLatitude=new String[]{
+            "13.0827","11.3410","11.6643"
+    };
+    public static String[] RequesterLongitude=new String[]{
+            "80.2707","77.7172","78.1460"
+    };
+
 
     public static String[] DonorNames=new String[]{
             "Kim Do Young", "Black Widow","Tony Stark"
@@ -29,6 +36,12 @@ public class DonorStatusDetails_NotificationsData {
     };
     public static String[] DonorStatus=new String[]{
             "Available","Unavailable","Unavailable"
+    };
+    public static String[] DonorLatitude=new String[]{
+            "11.3410","13.0827","11.3410"
+    };
+    public static String[] DonorLongitude=new String[]{
+            "77.7172","80.2707","77.7172"
     };
 
     public static String[] EventNames=new String[]{

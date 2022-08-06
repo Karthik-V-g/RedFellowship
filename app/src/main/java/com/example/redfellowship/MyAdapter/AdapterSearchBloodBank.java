@@ -1,17 +1,20 @@
 package com.example.redfellowship.MyAdapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.redfellowship.Model.RowModelSearchBloodBank;
 import com.example.redfellowship.R;
+import com.example.redfellowship.RouteMap;
 
 import java.util.List;
 
@@ -53,32 +56,47 @@ public class AdapterSearchBloodBank extends RecyclerView.Adapter<AdapterSearchBl
         return modelList.size();
     }
 
-    class MyHolder extends RecyclerView.ViewHolder implements  View.OnClickListener
+    class MyHolder extends RecyclerView.ViewHolder implements View.OnClickListener
         {
             TextView name,bloodtype,units,address;
             CircleImageView image;
+            ImageView map,call;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.sbbname);
             bloodtype=itemView.findViewById(R.id.sbbbloodtype);
             units=itemView.findViewById(R.id.sbbunits);
             address=itemView.findViewById(R.id.sbbaddress);
+            map=itemView.findViewById(R.id.btnLocation);
+            call=itemView.findViewById(R.id.call);
+            call.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i =new Intent(Intent.ACTION_DIAL);
+                    i.setData(Uri.parse("tel:1234567895"));
+                    context.startActivity(i);
+
+                }
+            });
             itemView.setOnClickListener(this);
 
         }
-
-
+            @Override
             public void onClick(View v) {
-            int position=getAbsoluteAdapterPosition();
-            Toast.makeText(context,"position"+position,Toast.LENGTH_SHORT).show();
-          /* Intent intent =new Intent(context, SearchDonor2.class);
-            intent.putExtra("sdname",modelList.get(position).getsdname());
-            intent.putExtra("sdbloodtype",modelList.get(position).getsdbloodtype());
-            context.startActivity(intent);*/
+                int position=getAbsoluteAdapterPosition();
+                // Toast.makeText(context,"position"+position,Toast.LENGTH_SHORT).show();
+                map.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    Intent intent1=new Intent(context, RouteMap.class);
+                    intent1.putExtra("sdlatitude", modelList.get(position).getsbblat());
+                    intent1.putExtra("sdlongitude",modelList.get(position).getsbblon());
+                    context.startActivity(intent1);
 
+                    }
+                });
 
+            }
 
-
-        }
     }
 }

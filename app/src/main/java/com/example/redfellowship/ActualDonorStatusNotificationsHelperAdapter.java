@@ -3,11 +3,14 @@ package com.example.redfellowship;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,15 +26,19 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
     ArrayList arrayListcontact;
     ArrayList arrayListaddress;
     ArrayList arrayListduedate;
+    ArrayList arrayListlatitude;
+    ArrayList arrayListlongitude;
     AlertDialog.Builder builder;
 
-    public ActualDonorStatusNotificationsHelperAdapter(Context context,ArrayList arrayListname,ArrayList arrayListbloodtype,ArrayList arrayListcontact,ArrayList arrayListaddress, ArrayList arrayListduedate){
+    public ActualDonorStatusNotificationsHelperAdapter(Context context,ArrayList arrayListname,ArrayList arrayListbloodtype,ArrayList arrayListcontact,ArrayList arrayListaddress, ArrayList arrayListduedate,ArrayList arrayListlatitude,ArrayList arrayListlongitude){
         this.context=context;
         this.arrayListname=arrayListname;
         this.arrayListbloodtype=arrayListbloodtype;
         this.arrayListcontact=arrayListcontact;
         this.arrayListaddress=arrayListaddress;
         this.arrayListduedate=arrayListduedate;
+        this.arrayListlatitude=arrayListlatitude;
+        this.arrayListlongitude=arrayListlongitude;
     }
 
     @NonNull
@@ -85,6 +92,9 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
         viewHolderClass.tv4.setText(DonorStatusDetails_NotificationsData.RequesterDueDate[position]);
         viewHolderClass.tv5.setText(DonorStatusDetails_NotificationsData.RequesterAddress[position]);
 
+
+
+
         viewHolderClass.btnBloodRequestAcceptDecline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,10 +102,30 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
             }
         });
 
+        viewHolderClass.call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:1234567895"));
+                context.startActivity(i);
+            }
+        });
+
+        viewHolderClass.location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(context, RouteMap.class);
+                intent1.putExtra("sdlatitude", DonorStatusDetails_NotificationsData.RequesterLatitude[position]);
+                intent1.putExtra("sdlongitude",DonorStatusDetails_NotificationsData.RequesterLongitude[position]);
+                context.startActivity(intent1);
+            }
+        });
+
+
         viewHolderClass.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context,"Item selected",Toast.LENGTH_LONG).show();
+                //  Toast.makeText(context,"Item selected"+  position,Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -107,6 +137,7 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
     public class ViewHolderClass extends RecyclerView.ViewHolder {
         TextView tv1,tv2,tv3,tv5,tv4;
         Button btnBloodRequestAcceptDecline;
+        ImageView location,call;
         public ViewHolderClass(@NonNull View itemView) {
             super(itemView);
             tv1=(TextView)itemView.findViewById(R.id.etReq_name);
@@ -115,6 +146,9 @@ public class ActualDonorStatusNotificationsHelperAdapter extends RecyclerView.Ad
             tv4=(TextView)itemView.findViewById(R.id.etReq_date);
             tv5=(TextView)itemView.findViewById(R.id.etReq_address);
             btnBloodRequestAcceptDecline = (Button) itemView.findViewById(R.id.btnBloodRequestAcceptDecline);
+            call=itemView.findViewById(R.id.call);
+            location=itemView.findViewById(R.id.location);
+
         }
     }
 }

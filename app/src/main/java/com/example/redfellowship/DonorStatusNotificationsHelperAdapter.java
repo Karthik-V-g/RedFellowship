@@ -1,18 +1,16 @@
 package com.example.redfellowship;
 
 import android.content.Context;
-import android.content.res.Resources;
+import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.util.Log;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -24,13 +22,18 @@ public class DonorStatusNotificationsHelperAdapter extends RecyclerView.Adapter 
     ArrayList arrayListaddress;
     ArrayList arrayListstatus;
     ArrayList arrayListbloodtype;
-    public DonorStatusNotificationsHelperAdapter(Context context,ArrayList arrayListname,ArrayList arrayListcontact,ArrayList arrayListaddress, ArrayList arrayListstatus, ArrayList arrayListbloodtype){
+    ArrayList arrayListlatitude;
+    ArrayList arrayListlongitude;
+
+    public DonorStatusNotificationsHelperAdapter(Context context,ArrayList arrayListname,ArrayList arrayListcontact,ArrayList arrayListaddress, ArrayList arrayListstatus, ArrayList arrayListbloodtype,ArrayList arrayListlatitude,ArrayList arrayListlongitude){
         this.context=context;
         this.arrayListname=arrayListname;
         this.arrayListcontact=arrayListcontact;
         this.arrayListaddress=arrayListaddress;
         this.arrayListstatus=arrayListstatus;
         this.arrayListbloodtype=arrayListbloodtype;
+        this.arrayListlatitude=arrayListlatitude;
+        this.arrayListlongitude=arrayListlongitude;
     }
     @NonNull
     @Override
@@ -59,6 +62,25 @@ public class DonorStatusNotificationsHelperAdapter extends RecyclerView.Adapter 
             viewHolderClass.tv4.setTextColor(Color.parseColor("#ef5350"));
         }
 
+        viewHolderClass.call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:1234567895"));
+                context.startActivity(i);
+            }
+        });
+
+        viewHolderClass.location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(context, RouteMap.class);
+                intent1.putExtra("sdlatitude", DonorStatusDetails_NotificationsData.DonorLatitude[position]);
+                intent1.putExtra("sdlongitude",DonorStatusDetails_NotificationsData.DonorLongitude[position]);
+                context.startActivity(intent1);
+            }
+        });
+
         viewHolderClass.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +97,7 @@ public class DonorStatusNotificationsHelperAdapter extends RecyclerView.Adapter 
     }
     public class ViewHolderClass extends RecyclerView.ViewHolder {
         TextView tv1,tv2,tv3,tv4,tv5;
+        ImageView call,location;
         public ViewHolderClass(@NonNull View itemView) {
             super(itemView);
             tv1=(TextView)itemView.findViewById(R.id.etDonor_name);
@@ -82,6 +105,8 @@ public class DonorStatusNotificationsHelperAdapter extends RecyclerView.Adapter 
             tv3=(TextView)itemView.findViewById(R.id.etDonor_address);
             tv4=(TextView)itemView.findViewById(R.id.etDonor_status);
             tv5=(TextView)itemView.findViewById(R.id.etDonor_bloodtype);
+            call=itemView.findViewById(R.id.call);
+            location=itemView.findViewById(R.id.location);
 
         }
 

@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.example.redfellowship.Model.RowModelSearchDonor;
 import com.example.redfellowship.R;
 import com.example.redfellowship.SearchDonor2;
@@ -57,6 +56,7 @@ public class AdapterSearchDonor extends RecyclerView.Adapter<AdapterSearchDonor.
     class MyHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
         TextView name,bloodtype,address;
         CircleImageView image;
+
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             image=itemView.findViewById(R.id.image);

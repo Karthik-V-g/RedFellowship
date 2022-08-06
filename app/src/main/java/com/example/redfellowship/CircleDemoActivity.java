@@ -116,7 +116,7 @@ public class CircleDemoActivity extends AppCompatActivity implements OnMapReadyC
         lon=CurrentLocation.lon;
         addMarker();
         addCircle();
-        Toast.makeText(this, ""+lat, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, ""+lat, Toast.LENGTH_SHORT).show();
         hMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 14));
 
 

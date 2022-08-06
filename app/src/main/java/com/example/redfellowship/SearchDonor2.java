@@ -2,6 +2,7 @@ package com.example.redfellowship;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SearchDonor2 extends AppCompatActivity {
 TextView sdname,sdbloodtype,sdage,sdlastdonation,sdaddress;
-ImageView map;
+ImageView map,call;
 CircleImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ CircleImageView image;
         sdage=findViewById(R.id.sdage);
         sdlastdonation=findViewById(R.id.sdlastdonation);
         sdaddress=findViewById(R.id.sbbaddress);
+        call=findViewById(R.id.call);
         map=findViewById(R.id.map);
 
         image.setImageResource(image1);
@@ -61,6 +63,15 @@ CircleImageView image;
         sdlastdonation.setText(lastdonation);
         sdaddress.setText(address);
 
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:1234567895"));
+                startActivity(i);
+
+            }
+        });
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
